@@ -1,0 +1,172 @@
+{
+  "name": "vector-embeddings",
+  "description": "Create Vector Embeddings from a Scan",
+  "image": "embeddingsdockerimage-web:latest",
+  "type": "docker",
+  "command-line": "python3 -u create_embeddings.py #PROJECT# #SUBJECT_ID# #SESSION_ID# #SCAN_ID# #MILVUS_URL# #MILVUS_PORT# #MILVUS_TOKEN# #BATCH_SIZE#",
+  "mounts": [
+    {
+      "name": "dicom-in",
+      "writable": false,
+      "path": "/input"
+    }
+  ],
+  "environment-variables": {},
+  "ports": {},
+  "inputs": [
+    {
+      "name": "PROJECT",
+      "type": "string",
+      "required": true,
+      "select-values": []
+    },
+    {
+      "name": "SESSION_ID",
+      "type": "string",
+      "required": true,
+      "select-values": []
+    },
+    {
+      "name": "SUBJECT_ID",
+      "type": "string",
+      "required": true,
+      "select-values": []
+    },
+    {
+      "name": "SCAN_ID",
+      "type": "string",
+      "required": true,
+      "select-values": []
+    },
+    {
+      "name": "MILVUS_URL",
+      "type": "string",
+      "required": true,
+      "select-values": []
+    },
+    {
+      "name": "MILVUS_PORT",
+      "type": "string",
+      "required": true,
+      "select-values": []
+    },
+    {
+      "name": "MILVUS_TOKEN",
+      "type": "string",
+      "required": true,
+      "select-values": []
+    },
+    {
+      "name": "BATCH_SIZE",
+      "type": "string",
+      "required": true,
+      "select-values": []
+    }
+  ],
+  "outputs": [],
+  "xnat": [
+    {
+      "name": "vector-embeddings",
+      "label": "vector-embeddings",
+      "description": "Create Vector Embeddings from a Scan",
+      "contexts": [
+        "xnat:imageScanData"
+      ],
+      "external-inputs": [
+        {
+          "name": "scan",
+          "description": "Scan",
+          "type": "Scan",
+          "matcher": "'DICOM' in @.resources[*].label",
+          "required": true,
+          "load-children": true
+        }
+      ],
+      "derived-inputs": [
+        {
+          "name": "session",
+          "description": "Input Session",
+          "type": "Session",
+          "required": true,
+          "load-children": false,
+          "derived-from-wrapper-input": "scan",
+          "multiple": false
+        },
+        {
+          "name": "scan-id",
+          "description": "The ID of the scan",
+          "type": "string",
+          "required": true,
+          "provides-value-for-command-input": "SCAN_ID",
+          "user-settable": false,
+          "load-children": false,
+          "derived-from-wrapper-input": "scan",
+          "derived-from-xnat-object-property": "id",
+          "multiple": false
+        },
+        {
+          "name": "session-id",
+          "description": "The ID of the session",
+          "type": "string",
+          "required": true,
+          "provides-value-for-command-input": "SESSION_ID",
+          "user-settable": false,
+          "load-children": false,
+          "derived-from-wrapper-input": "session",
+          "derived-from-xnat-object-property": "id",
+          "multiple": false
+        },
+        {
+          "name": "scan-dicoms",
+          "description": "The dicom resource on the scan",
+          "type": "Resource",
+          "matcher": "@.label == 'DICOM'",
+          "required": true,
+          "provides-files-for-command-mount": "dicom-in",
+          "load-children": false,
+          "derived-from-wrapper-input": "scan",
+          "multiple": false
+        },
+        {
+          "name": "subject",
+          "description": "Subject",
+          "type": "Subject",
+          "required": true,
+          "load-children": false,
+          "derived-from-wrapper-input": "session",
+          "multiple": false
+        },
+        {
+          "name": "subject-id",
+          "description": "The ID of the subect",
+          "type": "string",
+          "required": true,
+          "provides-value-for-command-input": "SUBJECT_ID",
+          "user-settable": false,
+          "load-children": false,
+          "derived-from-wrapper-input": "subject",
+          "derived-from-xnat-object-property": "id",
+          "multiple": false
+        },
+        {
+          "name": "project",
+          "description": "The ID of the project",
+          "type": "string",
+          "required": true,
+          "provides-value-for-command-input": "PROJECT",
+          "user-settable": false,
+          "load-children": false,
+          "derived-from-wrapper-input": "session",
+          "derived-from-xnat-object-property": "project-id",
+          "multiple": false
+        }
+      ],
+      "output-handlers": []
+    }
+  ],
+  "reserve-memory": 14300,
+  "container-labels": {},
+  "generic-resources": {},
+  "ulimits": {},
+  "secrets": []
+}

@@ -1,0 +1,17 @@
+README.md
+setup.py
+MedCLIP.egg-info/PKG-INFO
+MedCLIP.egg-info/SOURCES.txt
+MedCLIP.egg-info/dependency_links.txt
+MedCLIP.egg-info/requires.txt
+MedCLIP.egg-info/top_level.txt
+medclip/__init__.py
+medclip/constants.py
+medclip/dataset.py
+medclip/evaluator.py
+medclip/losses.py
+medclip/modeling_medclip.py
+medclip/prompts.py
+medclip/trainer.py
+medclip/utils.py
+medclip/vision_model.py
