@@ -1,9 +1,9 @@
 {
-  "name": "vector-embeddings",
+  "name": "opendocker",
   "description": "Create Vector Embeddings from a Scan",
   "image": "embeddingsdockerimage-web:latest",
   "type": "docker",
-  "command-line": "python3 -u scripts/run_zero_shot.py #PROJECT# #SUBJECT_ID# #SESSION_ID# #SCAN_ID# #MILVUS_URL# #MILVUS_PORT# #MILVUS_TOKEN# #BATCH_SIZE#",
+  "command-line": "sleep infinity",
   "mounts": [
     {
       "name": "dicom-in",
@@ -19,6 +19,11 @@
       "name": "report-in",
       "writable": false,
       "path": "/report"
+    },
+    {
+      "name": "metadata-in",
+      "writable": false,
+      "path": "/metadata"
     }
   ],
   "environment-variables": {},
@@ -76,23 +81,33 @@
   "outputs": [],
   "xnat": [
     {
-      "name": "vector-embeddings",
-      "label": "vector-embeddings",
+      "name": "open-docker",
+      "label": "open-docker",
       "description": "Create Vector Embeddings from a Scan",
       "contexts": [
-        "xnat:imageScanData"
+        "xnat:imageSessionData"
       ],
       "external-inputs": [
+        {
+          "name": "session",
+          "description": "Input Session",
+          "type": "Session",
+          "required": true,
+          "provides-files-for-command-mount": "dicom-in",
+          "load-children": true
+        }
+      ],
+      "derived-inputs": [
         {
           "name": "scan",
           "description": "Scan",
           "type": "Scan",
           "matcher": "'NIFTI' in @.resources[*].label",
           "required": true,
-          "load-children": true
-        }
-      ],
-      "derived-inputs": [
+          "load-children": true,
+          "derived-from-wrapper-input": "session",
+          "multiple": false
+        },
         {
           "name": "scan-id",
           "description": "The ID of the scan",
@@ -103,15 +118,6 @@
           "load-children": false,
           "derived-from-wrapper-input": "scan",
           "derived-from-xnat-object-property": "id",
-          "multiple": false
-        },
-        {
-          "name": "session",
-          "description": "Input Session",
-          "type": "Session",
-          "required": true,
-          "load-children": false,
-          "derived-from-wrapper-input": "scan",
           "multiple": false
         },
         {
@@ -132,7 +138,6 @@
           "type": "Resource",
           "matcher": "@.label == 'NIFTI'",
           "required": true,
-          "provides-files-for-command-mount": "dicom-in",
           "load-children": false,
           "derived-from-wrapper-input": "scan",
           "multiple": false
@@ -191,12 +196,25 @@
           "load-children": false,
           "derived-from-wrapper-input": "scan",
           "multiple": false
+        },
+        {
+          "name": "scan-metadata",
+          "description": "The dicom resource on the scan",
+          "type": "Resource",
+          "matcher": "@.label == 'METADATA'",
+          "required": true,
+          "provides-files-for-command-mount": "metadata-in",
+          "load-children": false,
+          "derived-from-wrapper-input": "scan",
+          "multiple": false
         }
       ],
       "output-handlers": []
     }
   ],
   "reserve-memory": 15000,
+  "ipc-mode": "host",
+  "shm-size": 167108864000,
   "container-labels": {},
   "generic-resources": {},
   "ulimits": {},

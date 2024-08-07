@@ -3,4 +3,9 @@ version: '3'
 services:
   web:
     build: .
-    command: python3 -u /workspace/load.py 1 2 3 4 test
+    command: sleep infinity
+    ipc: host
+    deploy:
+      resources:
+        reservations:
+          memory: 15000M

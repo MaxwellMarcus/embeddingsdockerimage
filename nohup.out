@@ -1,0 +1,1249 @@
+time="2024-07-13T15:55:28Z" level=warning msg="/home/ec2-user/embeddingsdockerimage/docker-compose.yml: `version` is obsolete"
+#0 building with "default" instance using docker driver
+
+#1 [web internal] load build definition from Dockerfile
+#1 transferring dockerfile:
+#1 transferring dockerfile: 712B 0.0s done
+#1 DONE 0.2s
+
+#2 [web internal] load .dockerignore
+#2 transferring context: 2B done
+#2 DONE 0.2s
+
+#3 [web internal] load metadata for docker.io/library/python:3.10.0-buster
+#3 DONE 1.3s
+
+#4 [web 1/8] FROM docker.io/library/python:3.10.0-buster@sha256:bb76a025d1ba1820c33197637d21484e439347cb18c59d1858f06425d0a3b403
+#4 DONE 0.0s
+
+#5 [web internal] load build context
+#5 transferring context: 25.27kB 0.0s done
+#5 DONE 0.1s
+
+#4 [web 1/8] FROM docker.io/library/python:3.10.0-buster@sha256:bb76a025d1ba1820c33197637d21484e439347cb18c59d1858f06425d0a3b403
+#4 CACHED
+
+#6 [web 2/8] COPY ./workspace/CT-CLIP/ /CT-CLIP
+#6 DONE 193.5s
+
+#7 [web 3/8] WORKDIR /CT-CLIP
+#7 DONE 0.1s
+
+#8 [web 4/8] RUN apt-get update -y && apt-get install libgl1 -y
+#8 2.789 Get:1 http://security.debian.org/debian-security buster/updates InRelease [34.8 kB]
+#8 2.789 Get:2 http://deb.debian.org/debian buster InRelease [122 kB]
+#8 2.825 Get:3 http://deb.debian.org/debian buster-updates InRelease [56.6 kB]
+#8 3.049 Get:4 http://security.debian.org/debian-security buster/updates/main amd64 Packages [610 kB]
+#8 3.185 Get:5 http://deb.debian.org/debian buster/main amd64 Packages [7909 kB]
+#8 3.317 Get:6 http://deb.debian.org/debian buster-updates/main amd64 Packages [8788 B]
+#8 4.397 Fetched 8741 kB in 2s (4408 kB/s)
+#8 4.397 Reading package lists...
+#8 5.052 Reading package lists...
+#8 5.697 Building dependency tree...
+#8 5.825 Reading state information...
+#8 5.932 The following additional packages will be installed:
+#8 5.932   libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm-nouveau2 libdrm-radeon1
+#8 5.932   libdrm2 libgl1-mesa-dri libglapi-mesa libglvnd0 libglx-mesa0 libglx0
+#8 5.932   libllvm7 libpciaccess0 libsensors-config libsensors5 libx11-xcb1
+#8 5.932   libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-present0 libxcb-sync1
+#8 5.932   libxdamage1 libxfixes3 libxshmfence1 libxxf86vm1
+#8 5.933 Suggested packages:
+#8 5.933   pciutils lm-sensors
+#8 6.061 The following NEW packages will be installed:
+#8 6.061   libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm-nouveau2 libdrm-radeon1
+#8 6.061   libdrm2 libgl1 libgl1-mesa-dri libglapi-mesa libglvnd0 libglx-mesa0 libglx0
+#8 6.061   libllvm7 libpciaccess0 libsensors-config libsensors5 libx11-xcb1
+#8 6.061   libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-present0 libxcb-sync1
+#8 6.062   libxdamage1 libxfixes3 libxshmfence1 libxxf86vm1
+#8 6.109 0 upgraded, 26 newly installed, 0 to remove and 168 not upgraded.
+#8 6.109 Need to get 21.3 MB of archives.
+#8 6.109 After this operation, 214 MB of additional disk space will be used.
+#8 6.109 Get:1 http://security.debian.org/debian-security buster/updates/main amd64 libx11-xcb1 amd64 2:1.6.7-1+deb10u4 [191 kB]
+#8 6.119 Get:2 http://deb.debian.org/debian buster/main amd64 libdrm-common all 2.4.97-1 [13.8 kB]
+#8 6.131 Get:3 http://deb.debian.org/debian buster/main amd64 libdrm2 amd64 2.4.97-1 [39.7 kB]
+#8 6.136 Get:4 http://deb.debian.org/debian buster/main amd64 libdrm-amdgpu1 amd64 2.4.97-1 [27.3 kB]
+#8 6.146 Get:5 http://deb.debian.org/debian buster/main amd64 libpciaccess0 amd64 0.14-1 [53.5 kB]
+#8 6.152 Get:6 http://deb.debian.org/debian buster/main amd64 libdrm-intel1 amd64 2.4.97-1 [69.8 kB]
+#8 6.155 Get:7 http://deb.debian.org/debian buster/main amd64 libdrm-nouveau2 amd64 2.4.97-1 [26.3 kB]
+#8 6.157 Get:8 http://deb.debian.org/debian buster/main amd64 libdrm-radeon1 amd64 2.4.97-1 [31.1 kB]
+#8 6.157 Get:9 http://deb.debian.org/debian buster/main amd64 libglapi-mesa amd64 18.3.6-2+deb10u1 [66.3 kB]
+#8 6.163 Get:10 http://deb.debian.org/debian buster/main amd64 libllvm7 amd64 1:7.0.1-8+deb10u2 [13.1 MB]
+#8 6.294 Get:11 http://deb.debian.org/debian buster/main amd64 libsensors-config all 1:3.5.0-3 [31.6 kB]
+#8 6.294 Get:12 http://deb.debian.org/debian buster/main amd64 libsensors5 amd64 1:3.5.0-3 [52.6 kB]
+#8 6.294 Get:13 http://deb.debian.org/debian buster/main amd64 libgl1-mesa-dri amd64 18.3.6-2+deb10u1 [6685 kB]
+#8 6.358 Get:14 http://deb.debian.org/debian buster/main amd64 libglvnd0 amd64 1.1.0-1 [48.6 kB]
+#8 6.358 Get:15 http://deb.debian.org/debian buster/main amd64 libxcb-dri2-0 amd64 1.13.1-2 [101 kB]
+#8 6.358 Get:16 http://deb.debian.org/debian buster/main amd64 libxcb-dri3-0 amd64 1.13.1-2 [100 kB]
+#8 6.359 Get:17 http://deb.debian.org/debian buster/main amd64 libxcb-glx0 amd64 1.13.1-2 [116 kB]
+#8 6.363 Get:18 http://deb.debian.org/debian buster/main amd64 libxcb-present0 amd64 1.13.1-2 [99.1 kB]
+#8 6.363 Get:19 http://deb.debian.org/debian buster/main amd64 libxcb-sync1 amd64 1.13.1-2 [103 kB]
+#8 6.364 Get:20 http://deb.debian.org/debian buster/main amd64 libxfixes3 amd64 1:5.0.3-1 [21.9 kB]
+#8 6.364 Get:21 http://deb.debian.org/debian buster/main amd64 libxdamage1 amd64 1:1.1.4-3+b3 [14.9 kB]
+#8 6.364 Get:22 http://deb.debian.org/debian buster/main amd64 libxshmfence1 amd64 1.3-1 [8820 B]
+#8 6.369 Get:23 http://deb.debian.org/debian buster/main amd64 libxxf86vm1 amd64 1:1.1.4-1+b2 [20.8 kB]
+#8 6.369 Get:24 http://deb.debian.org/debian buster/main amd64 libglx-mesa0 amd64 18.3.6-2+deb10u1 [180 kB]
+#8 6.379 Get:25 http://deb.debian.org/debian buster/main amd64 libglx0 amd64 1.1.0-1 [30.0 kB]
+#8 6.379 Get:26 http://deb.debian.org/debian buster/main amd64 libgl1 amd64 1.1.0-1 [91.1 kB]
+#8 6.668 debconf: delaying package configuration, since apt-utils is not installed
+#8 6.702 Fetched 21.3 MB in 0s (72.0 MB/s)
+#8 6.759 Selecting previously unselected package libdrm-common.
+#8 6.759 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 24613 files and directories currently installed.)
+#8 7.223 Preparing to unpack .../00-libdrm-common_2.4.97-1_all.deb ...
+#8 7.235 Unpacking libdrm-common (2.4.97-1) ...
+#8 7.335 Selecting previously unselected package libdrm2:amd64.
+#8 7.336 Preparing to unpack .../01-libdrm2_2.4.97-1_amd64.deb ...
+#8 7.354 Unpacking libdrm2:amd64 (2.4.97-1) ...
+#8 7.433 Selecting previously unselected package libdrm-amdgpu1:amd64.
+#8 7.434 Preparing to unpack .../02-libdrm-amdgpu1_2.4.97-1_amd64.deb ...
+#8 7.443 Unpacking libdrm-amdgpu1:amd64 (2.4.97-1) ...
+#8 7.513 Selecting previously unselected package libpciaccess0:amd64.
+#8 7.514 Preparing to unpack .../03-libpciaccess0_0.14-1_amd64.deb ...
+#8 7.524 Unpacking libpciaccess0:amd64 (0.14-1) ...
+#8 7.599 Selecting previously unselected package libdrm-intel1:amd64.
+#8 7.602 Preparing to unpack .../04-libdrm-intel1_2.4.97-1_amd64.deb ...
+#8 7.609 Unpacking libdrm-intel1:amd64 (2.4.97-1) ...
+#8 7.689 Selecting previously unselected package libdrm-nouveau2:amd64.
+#8 7.692 Preparing to unpack .../05-libdrm-nouveau2_2.4.97-1_amd64.deb ...
+#8 7.700 Unpacking libdrm-nouveau2:amd64 (2.4.97-1) ...
+#8 7.794 Selecting previously unselected package libdrm-radeon1:amd64.
+#8 7.794 Preparing to unpack .../06-libdrm-radeon1_2.4.97-1_amd64.deb ...
+#8 7.805 Unpacking libdrm-radeon1:amd64 (2.4.97-1) ...
+#8 7.878 Selecting previously unselected package libglapi-mesa:amd64.
+#8 7.880 Preparing to unpack .../07-libglapi-mesa_18.3.6-2+deb10u1_amd64.deb ...
+#8 7.889 Unpacking libglapi-mesa:amd64 (18.3.6-2+deb10u1) ...
+#8 7.971 Selecting previously unselected package libllvm7:amd64.
+#8 7.973 Preparing to unpack .../08-libllvm7_1%3a7.0.1-8+deb10u2_amd64.deb ...
+#8 7.982 Unpacking libllvm7:amd64 (1:7.0.1-8+deb10u2) ...
+#8 9.252 Selecting previously unselected package libsensors-config.
+#8 9.254 Preparing to unpack .../09-libsensors-config_1%3a3.5.0-3_all.deb ...
+#8 9.264 Unpacking libsensors-config (1:3.5.0-3) ...
+#8 9.340 Selecting previously unselected package libsensors5:amd64.
+#8 9.342 Preparing to unpack .../10-libsensors5_1%3a3.5.0-3_amd64.deb ...
+#8 9.425 Unpacking libsensors5:amd64 (1:3.5.0-3) ...
+#8 9.504 Selecting previously unselected package libgl1-mesa-dri:amd64.
+#8 9.507 Preparing to unpack .../11-libgl1-mesa-dri_18.3.6-2+deb10u1_amd64.deb ...
+#8 9.522 Unpacking libgl1-mesa-dri:amd64 (18.3.6-2+deb10u1) ...
+#8 10.18 Selecting previously unselected package libglvnd0:amd64.
+#8 10.19 Preparing to unpack .../12-libglvnd0_1.1.0-1_amd64.deb ...
+#8 10.19 Unpacking libglvnd0:amd64 (1.1.0-1) ...
+#8 10.27 Selecting previously unselected package libx11-xcb1:amd64.
+#8 10.27 Preparing to unpack .../13-libx11-xcb1_2%3a1.6.7-1+deb10u4_amd64.deb ...
+#8 10.28 Unpacking libx11-xcb1:amd64 (2:1.6.7-1+deb10u4) ...
+#8 10.35 Selecting previously unselected package libxcb-dri2-0:amd64.
+#8 10.35 Preparing to unpack .../14-libxcb-dri2-0_1.13.1-2_amd64.deb ...
+#8 10.36 Unpacking libxcb-dri2-0:amd64 (1.13.1-2) ...
+#8 10.44 Selecting previously unselected package libxcb-dri3-0:amd64.
+#8 10.44 Preparing to unpack .../15-libxcb-dri3-0_1.13.1-2_amd64.deb ...
+#8 10.45 Unpacking libxcb-dri3-0:amd64 (1.13.1-2) ...
+#8 10.51 Selecting previously unselected package libxcb-glx0:amd64.
+#8 10.52 Preparing to unpack .../16-libxcb-glx0_1.13.1-2_amd64.deb ...
+#8 10.52 Unpacking libxcb-glx0:amd64 (1.13.1-2) ...
+#8 10.60 Selecting previously unselected package libxcb-present0:amd64.
+#8 10.60 Preparing to unpack .../17-libxcb-present0_1.13.1-2_amd64.deb ...
+#8 10.61 Unpacking libxcb-present0:amd64 (1.13.1-2) ...
+#8 10.69 Selecting previously unselected package libxcb-sync1:amd64.
+#8 10.69 Preparing to unpack .../18-libxcb-sync1_1.13.1-2_amd64.deb ...
+#8 10.70 Unpacking libxcb-sync1:amd64 (1.13.1-2) ...
+#8 10.78 Selecting previously unselected package libxfixes3:amd64.
+#8 10.78 Preparing to unpack .../19-libxfixes3_1%3a5.0.3-1_amd64.deb ...
+#8 10.78 Unpacking libxfixes3:amd64 (1:5.0.3-1) ...
+#8 10.85 Selecting previously unselected package libxdamage1:amd64.
+#8 10.85 Preparing to unpack .../20-libxdamage1_1%3a1.1.4-3+b3_amd64.deb ...
+#8 10.86 Unpacking libxdamage1:amd64 (1:1.1.4-3+b3) ...
+#8 10.93 Selecting previously unselected package libxshmfence1:amd64.
+#8 10.93 Preparing to unpack .../21-libxshmfence1_1.3-1_amd64.deb ...
+#8 10.94 Unpacking libxshmfence1:amd64 (1.3-1) ...
+#8 11.00 Selecting previously unselected package libxxf86vm1:amd64.
+#8 11.00 Preparing to unpack .../22-libxxf86vm1_1%3a1.1.4-1+b2_amd64.deb ...
+#8 11.01 Unpacking libxxf86vm1:amd64 (1:1.1.4-1+b2) ...
+#8 11.07 Selecting previously unselected package libglx-mesa0:amd64.
+#8 11.07 Preparing to unpack .../23-libglx-mesa0_18.3.6-2+deb10u1_amd64.deb ...
+#8 11.08 Unpacking libglx-mesa0:amd64 (18.3.6-2+deb10u1) ...
+#8 11.18 Selecting previously unselected package libglx0:amd64.
+#8 11.18 Preparing to unpack .../24-libglx0_1.1.0-1_amd64.deb ...
+#8 11.19 Unpacking libglx0:amd64 (1.1.0-1) ...
+#8 11.26 Selecting previously unselected package libgl1:amd64.
+#8 11.27 Preparing to unpack .../25-libgl1_1.1.0-1_amd64.deb ...
+#8 11.28 Unpacking libgl1:amd64 (1.1.0-1) ...
+#8 11.36 Setting up libxcb-dri3-0:amd64 (1.13.1-2) ...
+#8 11.38 Setting up libx11-xcb1:amd64 (2:1.6.7-1+deb10u4) ...
+#8 11.41 Setting up libpciaccess0:amd64 (0.14-1) ...
+#8 11.43 Setting up libglvnd0:amd64 (1.1.0-1) ...
+#8 11.46 Setting up libxcb-glx0:amd64 (1.13.1-2) ...
+#8 11.48 Setting up libsensors-config (1:3.5.0-3) ...
+#8 11.52 Setting up libxxf86vm1:amd64 (1:1.1.4-1+b2) ...
+#8 11.54 Setting up libxcb-present0:amd64 (1.13.1-2) ...
+#8 11.56 Setting up libxfixes3:amd64 (1:5.0.3-1) ...
+#8 11.59 Setting up libxcb-sync1:amd64 (1.13.1-2) ...
+#8 11.61 Setting up libsensors5:amd64 (1:3.5.0-3) ...
+#8 11.63 Setting up libglapi-mesa:amd64 (18.3.6-2+deb10u1) ...
+#8 11.66 Setting up libxcb-dri2-0:amd64 (1.13.1-2) ...
+#8 11.68 Setting up libxshmfence1:amd64 (1.3-1) ...
+#8 11.70 Setting up libllvm7:amd64 (1:7.0.1-8+deb10u2) ...
+#8 11.72 Setting up libdrm-common (2.4.97-1) ...
+#8 11.75 Setting up libxdamage1:amd64 (1:1.1.4-3+b3) ...
+#8 11.77 Setting up libdrm2:amd64 (2.4.97-1) ...
+#8 11.79 Setting up libdrm-amdgpu1:amd64 (2.4.97-1) ...
+#8 11.82 Setting up libdrm-nouveau2:amd64 (2.4.97-1) ...
+#8 11.84 Setting up libdrm-radeon1:amd64 (2.4.97-1) ...
+#8 11.86 Setting up libdrm-intel1:amd64 (2.4.97-1) ...
+#8 11.89 Setting up libgl1-mesa-dri:amd64 (18.3.6-2+deb10u1) ...
+#8 11.91 Setting up libglx-mesa0:amd64 (18.3.6-2+deb10u1) ...
+#8 11.94 Setting up libglx0:amd64 (1.1.0-1) ...
+#8 11.96 Setting up libgl1:amd64 (1.1.0-1) ...
+#8 11.99 Processing triggers for libc-bin (2.28-10) ...
+#8 DONE 12.9s
+
+#9 [web 5/8] RUN python3.10 -u -m pip install -U pymilvus
+#9 4.959 Collecting pymilvus
+#9 5.010   Downloading pymilvus-2.4.4-py3-none-any.whl (196 kB)
+#9 6.929 Collecting grpcio<=1.63.0,>=1.49.1
+#9 6.948   Downloading grpcio-1.63.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.6 MB)
+#9 7.586 Collecting pandas>=1.2.4
+#9 7.610   Downloading pandas-2.2.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.0 MB)
+#9 8.133 Collecting ujson>=2.0.0
+#9 8.150   Downloading ujson-5.10.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (53 kB)
+#9 8.616 Collecting setuptools>=67
+#9 8.635   Downloading setuptools-70.3.0-py3-none-any.whl (931 kB)
+#9 8.750 Collecting environs<=9.5.0
+#9 8.767   Downloading environs-9.5.0-py2.py3-none-any.whl (12 kB)
+#9 9.404 Collecting protobuf>=3.20.0
+#9 9.425   Downloading protobuf-5.27.2-cp38-abi3-manylinux2014_x86_64.whl (309 kB)
+#9 9.535 Collecting milvus-lite<2.5.0,>=2.4.0
+#9 9.553   Downloading milvus_lite-2.4.8-py3-none-manylinux2014_x86_64.whl (49.4 MB)
+#9 10.48 Collecting marshmallow>=3.0.0
+#9 10.51   Downloading marshmallow-3.21.3-py3-none-any.whl (49 kB)
+#9 10.60 Collecting python-dotenv
+#9 10.62   Downloading python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+#9 10.72 Collecting packaging>=17.0
+#9 10.74   Downloading packaging-24.1-py3-none-any.whl (53 kB)
+#9 10.90 Collecting tqdm
+#9 10.92   Downloading tqdm-4.66.4-py3-none-any.whl (78 kB)
+#9 11.17 Collecting pytz>=2020.1
+#9 11.19   Downloading pytz-2024.1-py2.py3-none-any.whl (505 kB)
+#9 11.28 Collecting python-dateutil>=2.8.2
+#9 11.30   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#9 11.39 Collecting tzdata>=2022.7
+#9 11.41   Downloading tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+#9 12.20 Collecting numpy>=1.22.4
+#9 12.22   Downloading numpy-2.0.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (19.3 MB)
+#9 12.57 Collecting six>=1.5
+#9 12.59   Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+#9 12.85 Installing collected packages: six, packaging, tzdata, tqdm, pytz, python-dotenv, python-dateutil, numpy, marshmallow, ujson, setuptools, protobuf, pandas, milvus-lite, grpcio, environs, pymilvus
+#9 15.33   Attempting uninstall: setuptools
+#9 15.33     Found existing installation: setuptools 57.5.0
+#9 15.41     Uninstalling setuptools-57.5.0:
+#9 15.69       Successfully uninstalled setuptools-57.5.0
+#9 22.32 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 22.32 Successfully installed environs-9.5.0 grpcio-1.63.0 marshmallow-3.21.3 milvus-lite-2.4.8 numpy-2.0.0 packaging-24.1 pandas-2.2.2 protobuf-5.27.2 pymilvus-2.4.4 python-dateutil-2.9.0.post0 python-dotenv-1.0.1 pytz-2024.1 setuptools-70.3.0 six-1.16.0 tqdm-4.66.4 tzdata-2024.1 ujson-5.10.0
+#9 22.45 WARNING: You are using pip version 21.2.4; however, version 24.1.2 is available.
+#9 22.45 You should consider upgrading via the '/usr/local/bin/python3.10 -m pip install --upgrade pip' command.
+#9 DONE 23.7s
+
+#10 [web 6/8] RUN python3.10 -u -m pip install -e /CT-CLIP/CT_CLIP
+#10 3.611 Obtaining file:///CT-CLIP/CT_CLIP
+#10 4.106 Collecting ImageNetV2_pytorch@ git+https://github.com/modestyachts/ImageNetV2_pytorch.git
+#10 4.106   Cloning https://github.com/modestyachts/ImageNetV2_pytorch.git to /tmp/pip-install-a1d0_gyp/imagenetv2-pytorch_607ebe9eec7e48a38a3d63eaf236f6ad
+#10 4.106   Running command git clone -q https://github.com/modestyachts/ImageNetV2_pytorch.git /tmp/pip-install-a1d0_gyp/imagenetv2-pytorch_607ebe9eec7e48a38a3d63eaf236f6ad
+#10 4.707   Resolved https://github.com/modestyachts/ImageNetV2_pytorch.git to commit 14d4456c39fe7f02a665544dd9fc37c1a5f8b635
+#10 5.288 Collecting beartype
+#10 5.338   Downloading beartype-0.18.5-py3-none-any.whl (917 kB)
+#10 5.437 Collecting einops>=0.6
+#10 5.451   Downloading einops-0.8.0-py3-none-any.whl (43 kB)
+#10 5.496 Collecting ftfy
+#10 5.511   Downloading ftfy-6.2.0-py3-none-any.whl (54 kB)
+#10 6.887 Collecting regex
+#10 6.902   Downloading regex-2024.5.15-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (775 kB)
+#10 7.088 Collecting torch==2.0.1
+#10 7.105   Downloading torch-2.0.1-cp310-cp310-manylinux1_x86_64.whl (619.9 MB)
+#10 21.88 Collecting torchvision
+#10 21.90   Downloading torchvision-0.18.1-cp310-cp310-manylinux1_x86_64.whl (7.0 MB)
+#10 22.21 Collecting XlsxWriter
+#10 22.23   Downloading XlsxWriter-3.2.0-py3-none-any.whl (159 kB)
+#10 22.45 Collecting h5py
+#10 22.47   Downloading h5py-3.11.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.3 MB)
+#10 23.17 Collecting matplotlib
+#10 23.19   Downloading matplotlib-3.9.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.3 MB)
+#10 23.52 Collecting seaborn
+#10 23.54   Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+#10 23.62 Collecting wilds
+#10 23.64   Downloading wilds-2.0.0-py3-none-any.whl (126 kB)
+#10 23.71 Collecting click
+#10 23.73   Downloading click-8.1.7-py3-none-any.whl (97 kB)
+#10 23.76 Collecting appdirs
+#10 23.78   Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+#10 23.81 Collecting attr
+#10 23.83   Downloading attr-0.3.2-py2.py3-none-any.whl (3.3 kB)
+#10 23.87 Collecting nltk
+#10 23.89   Downloading nltk-3.8.1-py3-none-any.whl (1.5 MB)
+#10 23.99 Collecting nvidia-cusolver-cu11==11.4.0.1
+#10 24.01   Downloading nvidia_cusolver_cu11-11.4.0.1-2-py3-none-manylinux1_x86_64.whl (102.6 MB)
+#10 25.80 Collecting filelock
+#10 25.82   Downloading filelock-3.15.4-py3-none-any.whl (16 kB)
+#10 25.89 Collecting triton==2.0.0
+#10 25.91   Downloading triton-2.0.0-1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (63.3 MB)
+#10 26.95 Collecting jinja2
+#10 26.97   Downloading jinja2-3.1.4-py3-none-any.whl (133 kB)
+#10 27.03 Collecting sympy
+#10 27.04   Downloading sympy-1.13.0-py3-none-any.whl (6.2 MB)
+#10 27.20 Collecting nvidia-cuda-nvrtc-cu11==11.7.99
+#10 27.21   Downloading nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
+#10 27.58 Collecting nvidia-cublas-cu11==11.10.3.66
+#10 27.59   Downloading nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
+#10 33.60 Collecting nvidia-cuda-cupti-cu11==11.7.101
+#10 33.61   Downloading nvidia_cuda_cupti_cu11-11.7.101-py3-none-manylinux1_x86_64.whl (11.8 MB)
+#10 33.82 Collecting nvidia-cusparse-cu11==11.7.4.91
+#10 33.84   Downloading nvidia_cusparse_cu11-11.7.4.91-py3-none-manylinux1_x86_64.whl (173.2 MB)
+#10 36.55 Collecting typing-extensions
+#10 36.56   Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+#10 36.61 Collecting nvidia-nccl-cu11==2.14.3
+#10 36.63   Downloading nvidia_nccl_cu11-2.14.3-py3-none-manylinux1_x86_64.whl (177.1 MB)
+#10 39.42 Collecting nvidia-cudnn-cu11==8.5.0.96
+#10 39.43   Downloading nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
+#10 51.25 Collecting networkx
+#10 51.27   Downloading networkx-3.3-py3-none-any.whl (1.7 MB)
+#10 51.34 Collecting nvidia-cufft-cu11==10.9.0.58
+#10 51.36   Downloading nvidia_cufft_cu11-10.9.0.58-py3-none-manylinux1_x86_64.whl (168.4 MB)
+#10 54.09 Collecting nvidia-cuda-runtime-cu11==11.7.99
+#10 54.10   Downloading nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
+#10 54.16 Collecting nvidia-nvtx-cu11==11.7.91
+#10 54.18   Downloading nvidia_nvtx_cu11-11.7.91-py3-none-manylinux1_x86_64.whl (98 kB)
+#10 54.23 Collecting nvidia-curand-cu11==10.2.10.91
+#10 54.25   Downloading nvidia_curand_cu11-10.2.10.91-py3-none-manylinux1_x86_64.whl (54.6 MB)
+#10 55.15 Requirement already satisfied: wheel in /usr/local/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch==2.0.1->ct-clip==0.1) (0.37.0)
+#10 55.15 Requirement already satisfied: setuptools in /usr/local/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch==2.0.1->ct-clip==0.1) (70.3.0)
+#10 55.25 Collecting lit
+#10 55.26   Downloading lit-18.1.8-py3-none-any.whl (96 kB)
+#10 55.73 Collecting cmake
+#10 55.75   Downloading cmake-3.30.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (26.9 MB)
+#10 56.38 Collecting wcwidth<0.3.0,>=0.2.12
+#10 56.39   Downloading wcwidth-0.2.13-py2.py3-none-any.whl (34 kB)
+#10 56.41 Requirement already satisfied: numpy>=1.17.3 in /usr/local/lib/python3.10/site-packages (from h5py->ct-clip==0.1) (2.0.0)
+#10 56.59 Collecting MarkupSafe>=2.0
+#10 56.61   Downloading MarkupSafe-2.1.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+#10 57.35 Collecting pillow>=8
+#10 57.36   Downloading pillow-10.4.0-cp310-cp310-manylinux_2_28_x86_64.whl (4.5 MB)
+#10 57.70 Collecting contourpy>=1.0.1
+#10 57.72   Downloading contourpy-1.2.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (305 kB)
+#10 57.81 Collecting pyparsing>=2.3.1
+#10 57.82   Downloading pyparsing-3.1.2-py3-none-any.whl (103 kB)
+#10 58.20 Collecting fonttools>=4.22.0
+#10 58.22   Downloading fonttools-4.53.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.6 MB)
+#10 58.47 Collecting kiwisolver>=1.3.1
+#10 58.49   Downloading kiwisolver-1.4.5-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+#10 58.53 Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/site-packages (from matplotlib->ct-clip==0.1) (24.1)
+#10 58.55 Collecting cycler>=0.10
+#10 58.56   Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#10 58.58 Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/site-packages (from matplotlib->ct-clip==0.1) (2.9.0.post0)
+#10 58.73 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib->ct-clip==0.1) (1.16.0)
+#10 58.76 Requirement already satisfied: tqdm in /usr/local/lib/python3.10/site-packages (from nltk->ct-clip==0.1) (4.66.4)
+#10 58.84 Collecting joblib
+#10 58.85   Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+#10 58.90 Requirement already satisfied: pandas>=1.2 in /usr/local/lib/python3.10/site-packages (from seaborn->ct-clip==0.1) (2.2.2)
+#10 58.98 Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/site-packages (from pandas>=1.2->seaborn->ct-clip==0.1) (2024.1)
+#10 58.99 Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.10/site-packages (from pandas>=1.2->seaborn->ct-clip==0.1) (2024.1)
+#10 59.03 Collecting mpmath<1.4,>=1.1.0
+#10 59.04   Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+#10 59.10 Collecting torchvision
+#10 59.11   Downloading torchvision-0.18.0-cp310-cp310-manylinux1_x86_64.whl (7.0 MB)
+#10 59.37   Downloading torchvision-0.17.2-cp310-cp310-manylinux1_x86_64.whl (6.9 MB)
+#10 59.60   Downloading torchvision-0.17.1-cp310-cp310-manylinux1_x86_64.whl (6.9 MB)
+#10 59.84   Downloading torchvision-0.17.0-cp310-cp310-manylinux1_x86_64.whl (6.9 MB)
+#10 60.18 Collecting requests
+#10 60.20   Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+#10 60.24 Collecting torchvision
+#10 60.26   Downloading torchvision-0.16.2-cp310-cp310-manylinux1_x86_64.whl (6.8 MB)
+#10 60.50   Downloading torchvision-0.16.1-cp310-cp310-manylinux1_x86_64.whl (6.8 MB)
+#10 60.79   Downloading torchvision-0.16.0-cp310-cp310-manylinux1_x86_64.whl (6.9 MB)
+#10 61.05   Downloading torchvision-0.15.2-cp310-cp310-manylinux1_x86_64.whl (6.0 MB)
+#10 61.31 Collecting idna<4,>=2.5
+#10 61.32   Downloading idna-3.7-py3-none-any.whl (66 kB)
+#10 61.60 Collecting charset-normalizer<4,>=2
+#10 61.62   Downloading charset_normalizer-3.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (142 kB)
+#10 61.78 Collecting urllib3<3,>=1.21.1
+#10 61.80   Downloading urllib3-2.2.2-py3-none-any.whl (121 kB)
+#10 61.93 Collecting certifi>=2017.4.17
+#10 61.94   Downloading certifi-2024.7.4-py3-none-any.whl (162 kB)
+#10 62.09 Collecting ogb>=1.2.6
+#10 62.10   Downloading ogb-1.3.6-py3-none-any.whl (78 kB)
+#10 62.20 Collecting outdated>=0.2.0
+#10 62.22   Downloading outdated-0.2.2-py2.py3-none-any.whl (7.5 kB)
+#10 62.77 Collecting scipy>=1.5.4
+#10 62.78   Downloading scipy-1.14.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (41.1 MB)
+#10 64.05 Collecting scikit-learn>=0.20.0
+#10 64.07   Downloading scikit_learn-1.5.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.4 MB)
+#10 64.43 Collecting littleutils
+#10 64.45   Downloading littleutils-0.2.4-py3-none-any.whl (8.1 kB)
+#10 64.54 Collecting threadpoolctl>=3.1.0
+#10 64.55   Downloading threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+#10 64.71 Building wheels for collected packages: ImageNetV2-pytorch
+#10 64.72   Building wheel for ImageNetV2-pytorch (setup.py): started
+#10 65.26   Building wheel for ImageNetV2-pytorch (setup.py): finished with status 'done'
+#10 65.26   Created wheel for ImageNetV2-pytorch: filename=imagenetv2_pytorch-0.1-py3-none-any.whl size=2657 sha256=a5513ee7d326ee63d721d4169e916a90d43d20b56d10fe75771a88d175cbbfcc
+#10 65.26   Stored in directory: /tmp/pip-ephem-wheel-cache-i1rua1nl/wheels/1f/7e/65/d45104c582d4a7127799588b0f65a16d0e9b8212417d778af6
+#10 65.26 Successfully built ImageNetV2-pytorch
+#10 65.76 Installing collected packages: urllib3, nvidia-cublas-cu11, mpmath, MarkupSafe, lit, idna, filelock, cmake, charset-normalizer, certifi, typing-extensions, triton, threadpoolctl, sympy, scipy, requests, nvidia-nvtx-cu11, nvidia-nccl-cu11, nvidia-cusparse-cu11, nvidia-cusolver-cu11, nvidia-curand-cu11, nvidia-cufft-cu11, nvidia-cudnn-cu11, nvidia-cuda-runtime-cu11, nvidia-cuda-nvrtc-cu11, nvidia-cuda-cupti-cu11, networkx, littleutils, joblib, jinja2, torch, scikit-learn, pyparsing, pillow, outdated, kiwisolver, fonttools, cycler, contourpy, wcwidth, torchvision, regex, ogb, matplotlib, click, XlsxWriter, wilds, seaborn, nltk, ImageNetV2-pytorch, h5py, ftfy, einops, beartype, attr, appdirs, ct-clip
+#10 125.1   Running setup.py develop for ct-clip
+#10 126.2 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 126.2 Successfully installed ImageNetV2-pytorch-0.1 MarkupSafe-2.1.5 XlsxWriter-3.2.0 appdirs-1.4.4 attr-0.3.2 beartype-0.18.5 certifi-2024.7.4 charset-normalizer-3.3.2 click-8.1.7 cmake-3.30.0 contourpy-1.2.1 ct-clip-0.1 cycler-0.12.1 einops-0.8.0 filelock-3.15.4 fonttools-4.53.1 ftfy-6.2.0 h5py-3.11.0 idna-3.7 jinja2-3.1.4 joblib-1.4.2 kiwisolver-1.4.5 lit-18.1.8 littleutils-0.2.4 matplotlib-3.9.1 mpmath-1.3.0 networkx-3.3 nltk-3.8.1 nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-cupti-cu11-11.7.101 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 nvidia-cufft-cu11-10.9.0.58 nvidia-curand-cu11-10.2.10.91 nvidia-cusolver-cu11-11.4.0.1 nvidia-cusparse-cu11-11.7.4.91 nvidia-nccl-cu11-2.14.3 nvidia-nvtx-cu11-11.7.91 ogb-1.3.6 outdated-0.2.2 pillow-10.4.0 pyparsing-3.1.2 regex-2024.5.15 requests-2.32.3 scikit-learn-1.5.1 scipy-1.14.0 seaborn-0.13.2 sympy-1.13.0 threadpoolctl-3.5.0 torch-2.0.1 torchvision-0.15.2 triton-2.0.0 typing-extensions-4.12.2 urllib3-2.2.2 wcwidth-0.2.13 wilds-2.0.0
+#10 126.2 WARNING: You are using pip version 21.2.4; however, version 24.1.2 is available.
+#10 126.2 You should consider upgrading via the '/usr/local/bin/python3.10 -m pip install --upgrade pip' command.
+#10 DONE 139.3s
+
+#11 [web 7/8] RUN python3.10 -u -m pip install -e /CT-CLIP/transformer_maskgit
+#11 1.642 Obtaining file:///CT-CLIP/transformer_maskgit
+#11 2.263 Collecting accelerate
+#11 2.305   Downloading accelerate-0.32.1-py3-none-any.whl (314 kB)
+#11 2.351 Requirement already satisfied: beartype in /usr/local/lib/python3.10/site-packages (from transformer_maskgit==0.0.0) (0.18.5)
+#11 2.351 Requirement already satisfied: einops>=0.6 in /usr/local/lib/python3.10/site-packages (from transformer_maskgit==0.0.0) (0.8.0)
+#11 2.503 Collecting ema-pytorch>=0.2.2
+#11 2.516   Downloading ema_pytorch-0.5.1-py3-none-any.whl (8.7 kB)
+#11 2.832 Collecting opencv-python
+#11 2.847   Downloading opencv_python-4.10.0.84-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (62.5 MB)
+#11 3.769 Requirement already satisfied: pillow in /usr/local/lib/python3.10/site-packages (from transformer_maskgit==0.0.0) (10.4.0)
+#11 3.776 Requirement already satisfied: numpy in /usr/local/lib/python3.10/site-packages (from transformer_maskgit==0.0.0) (2.0.0)
+#11 3.954 Collecting sentencepiece
+#11 3.966   Downloading sentencepiece-0.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+#11 3.992 Requirement already satisfied: torch==2.0.1 in /usr/local/lib/python3.10/site-packages (from transformer_maskgit==0.0.0) (2.0.1)
+#11 4.033 Collecting torchtyping
+#11 4.045   Downloading torchtyping-0.1.4-py3-none-any.whl (17 kB)
+#11 4.053 Requirement already satisfied: torchvision in /usr/local/lib/python3.10/site-packages (from transformer_maskgit==0.0.0) (0.15.2)
+#11 4.156 Collecting transformers==4.30.1
+#11 4.172   Downloading transformers-4.30.1-py3-none-any.whl (7.2 MB)
+#11 4.354 Requirement already satisfied: tqdm in /usr/local/lib/python3.10/site-packages (from transformer_maskgit==0.0.0) (4.66.4)
+#11 4.494 Collecting vector-quantize-pytorch==1.1.2
+#11 4.507   Downloading vector_quantize_pytorch-1.1.2-py3-none-any.whl (10.0 kB)
+#11 4.569 Collecting nibabel
+#11 4.581   Downloading nibabel-5.2.1-py3-none-any.whl (3.3 MB)
+#11 4.677 Collecting openpyxl
+#11 4.689   Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+#11 4.729 Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (11.7.99)
+#11 4.730 Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (11.10.3.66)
+#11 4.731 Requirement already satisfied: networkx in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (3.3)
+#11 4.732 Requirement already satisfied: nvidia-cudnn-cu11==8.5.0.96 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (8.5.0.96)
+#11 4.736 Requirement already satisfied: nvidia-cusparse-cu11==11.7.4.91 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (11.7.4.91)
+#11 4.737 Requirement already satisfied: nvidia-nvtx-cu11==11.7.91 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (11.7.91)
+#11 4.738 Requirement already satisfied: nvidia-cusolver-cu11==11.4.0.1 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (11.4.0.1)
+#11 4.738 Requirement already satisfied: nvidia-cuda-cupti-cu11==11.7.101 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (11.7.101)
+#11 4.740 Requirement already satisfied: nvidia-curand-cu11==10.2.10.91 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (10.2.10.91)
+#11 4.741 Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (11.7.99)
+#11 4.769 Requirement already satisfied: nvidia-nccl-cu11==2.14.3 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (2.14.3)
+#11 4.772 Requirement already satisfied: triton==2.0.0 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (2.0.0)
+#11 4.773 Requirement already satisfied: sympy in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (1.13.0)
+#11 4.773 Requirement already satisfied: filelock in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (3.15.4)
+#11 4.774 Requirement already satisfied: nvidia-cufft-cu11==10.9.0.58 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (10.9.0.58)
+#11 4.774 Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (3.1.4)
+#11 4.775 Requirement already satisfied: typing-extensions in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (4.12.2)
+#11 4.776 Requirement already satisfied: setuptools in /usr/local/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch==2.0.1->transformer_maskgit==0.0.0) (70.3.0)
+#11 4.778 Requirement already satisfied: wheel in /usr/local/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch==2.0.1->transformer_maskgit==0.0.0) (0.37.0)
+#11 5.287 Collecting pyyaml>=5.1
+#11 5.301   Downloading PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (705 kB)
+#11 6.038 Collecting tokenizers!=0.11.3,<0.14,>=0.11.1
+#11 6.051   Downloading tokenizers-0.13.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.8 MB)
+#11 6.575 Collecting safetensors>=0.3.1
+#11 6.588   Downloading safetensors-0.4.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+#11 6.610 Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.10/site-packages (from transformers==4.30.1->transformer_maskgit==0.0.0) (2024.5.15)
+#11 6.610 Requirement already satisfied: requests in /usr/local/lib/python3.10/site-packages (from transformers==4.30.1->transformer_maskgit==0.0.0) (2.32.3)
+#11 6.611 Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/site-packages (from transformers==4.30.1->transformer_maskgit==0.0.0) (24.1)
+#11 6.699 Collecting huggingface-hub<1.0,>=0.14.1
+#11 6.711   Downloading huggingface_hub-0.23.4-py3-none-any.whl (402 kB)
+#11 6.737 Requirement already satisfied: cmake in /usr/local/lib/python3.10/site-packages (from triton==2.0.0->torch==2.0.1->transformer_maskgit==0.0.0) (3.30.0)
+#11 6.737 Requirement already satisfied: lit in /usr/local/lib/python3.10/site-packages (from triton==2.0.0->torch==2.0.1->transformer_maskgit==0.0.0) (18.1.8)
+#11 6.915 Collecting fsspec>=2023.5.0
+#11 6.927   Downloading fsspec-2024.6.1-py3-none-any.whl (177 kB)
+#11 7.850 Collecting numpy
+#11 7.862   Downloading numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+#11 8.402 Collecting psutil
+#11 8.414   Downloading psutil-6.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (290 kB)
+#11 8.476 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/site-packages (from jinja2->torch==2.0.1->transformer_maskgit==0.0.0) (2.1.5)
+#11 8.650 Collecting et-xmlfile
+#11 8.663   Downloading et_xmlfile-1.1.0-py3-none-any.whl (4.7 kB)
+#11 8.701 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.30.1->transformer_maskgit==0.0.0) (2024.7.4)
+#11 8.705 Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.30.1->transformer_maskgit==0.0.0) (3.3.2)
+#11 8.705 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.30.1->transformer_maskgit==0.0.0) (2.2.2)
+#11 8.706 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.30.1->transformer_maskgit==0.0.0) (3.7)
+#11 8.728 Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/site-packages (from sympy->torch==2.0.1->transformer_maskgit==0.0.0) (1.3.0)
+#11 8.797 Collecting typeguard>=2.11.1
+#11 8.809   Downloading typeguard-4.3.0-py3-none-any.whl (35 kB)
+#11 9.871 Installing collected packages: pyyaml, fsspec, typeguard, tokenizers, safetensors, psutil, numpy, huggingface-hub, et-xmlfile, vector-quantize-pytorch, transformers, torchtyping, sentencepiece, openpyxl, opencv-python, nibabel, ema-pytorch, accelerate, transformer-maskgit
+#11 10.47   Attempting uninstall: numpy
+#11 10.47     Found existing installation: numpy 2.0.0
+#11 10.62     Uninstalling numpy-2.0.0:
+#11 10.91       Successfully uninstalled numpy-2.0.0
+#11 19.08   Running setup.py develop for transformer-maskgit
+#11 20.60 Successfully installed accelerate-0.32.1 ema-pytorch-0.5.1 et-xmlfile-1.1.0 fsspec-2024.6.1 huggingface-hub-0.23.4 nibabel-5.2.1 numpy-1.26.4 opencv-python-4.10.0.84 openpyxl-3.1.5 psutil-6.0.0 pyyaml-6.0.1 safetensors-0.4.3 sentencepiece-0.2.0 tokenizers-0.13.3 torchtyping-0.1.4 transformer-maskgit-0.0.0 transformers-4.30.1 typeguard-4.3.0 vector-quantize-pytorch-1.1.2
+#11 20.60 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 20.61 WARNING: You are using pip version 21.2.4; however, version 24.1.2 is available.
+#11 20.61 You should consider upgrading via the '/usr/local/bin/python3.10 -m pip install --upgrade pip' command.
+#11 DONE 22.7s
+
+#12 [web 8/8] RUN python3.10 -u -m pip install -U transformers==4.23.1
+#12 1.755 Collecting transformers==4.23.1
+#12 1.802   Downloading transformers-4.23.1-py3-none-any.whl (5.3 MB)
+#12 2.324 Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (2024.5.15)
+#12 2.324 Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (6.0.1)
+#12 2.327 Requirement already satisfied: huggingface-hub<1.0,>=0.10.0 in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (0.23.4)
+#12 2.328 Requirement already satisfied: tokenizers!=0.11.3,<0.14,>=0.11.1 in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (0.13.3)
+#12 2.328 Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (1.26.4)
+#12 2.329 Requirement already satisfied: requests in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (2.32.3)
+#12 2.329 Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (24.1)
+#12 2.329 Requirement already satisfied: tqdm>=4.27 in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (4.66.4)
+#12 2.330 Requirement already satisfied: filelock in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (3.15.4)
+#12 2.403 Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.10/site-packages (from huggingface-hub<1.0,>=0.10.0->transformers==4.23.1) (2024.6.1)
+#12 2.404 Requirement already satisfied: typing-extensions>=3.7.4.3 in /usr/local/lib/python3.10/site-packages (from huggingface-hub<1.0,>=0.10.0->transformers==4.23.1) (4.12.2)
+#12 2.526 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.23.1) (2024.7.4)
+#12 2.527 Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.23.1) (3.3.2)
+#12 2.528 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.23.1) (2.2.2)
+#12 2.528 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.23.1) (3.7)
+#12 3.773 Installing collected packages: transformers
+#12 3.773   Attempting uninstall: transformers
+#12 3.773     Found existing installation: transformers 4.30.1
+#12 4.136     Uninstalling transformers-4.30.1:
+#12 4.733       Successfully uninstalled transformers-4.30.1
+#12 7.696 ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+#12 7.696 transformer-maskgit 0.0.0 requires transformers==4.30.1, but you have transformers 4.23.1 which is incompatible.
+#12 7.696 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 7.696 Successfully installed transformers-4.23.1
+#12 7.701 WARNING: You are using pip version 21.2.4; however, version 24.1.2 is available.
+#12 7.701 You should consider upgrading via the '/usr/local/bin/python3.10 -m pip install --upgrade pip' command.
+#12 DONE 8.0s
+
+#13 [web] exporting to image
+#13 exporting layers
+#13 exporting layers 95.5s done
+#13 writing image sha256:d75dc2f43b9444138ef02c8cbfecfb1142af33f056d2fed1707da880fed3a5b1
+#13 writing image sha256:d75dc2f43b9444138ef02c8cbfecfb1142af33f056d2fed1707da880fed3a5b1 0.7s done
+#13 naming to docker.io/library/embeddingsdockerimage-web
+#13 naming to docker.io/library/embeddingsdockerimage-web 0.1s done
+#13 DONE 98.7s
+ Network embeddingsdockerimage_default  Creating
+ Network embeddingsdockerimage_default  Created
+ Container embeddingsdockerimage-web-1  Recreate
+Error response from daemon: No such container: a272e1e21487df89f88bff58f87bb0895821b9fc827af682b38df4ac62c1e9ad
+time="2024-07-19T16:23:58Z" level=warning msg="/home/ec2-user/embeddingsdockerimage/docker-compose.yml: `version` is obsolete"
+#0 building with "default" instance using docker driver
+
+#1 [web internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [web internal] load build definition from Dockerfile
+#2 transferring dockerfile: 723B done
+#2 DONE 0.0s
+
+#3 [web internal] load metadata for docker.io/library/python:3.10.0-buster
+#3 DONE 0.5s
+
+#4 [web 1/9] FROM docker.io/library/python:3.10.0-buster@sha256:bb76a025d1ba1820c33197637d21484e439347cb18c59d1858f06425d0a3b403
+#4 DONE 0.0s
+
+#5 [web internal] load build context
+#5 transferring context: 893.21MB 4.5s
+#5 transferring context: 1.97GB 9.6s
+#5 transferring context: 2.78GB 14.7s
+#5 transferring context: 3.22GB 19.8s
+#5 transferring context: 4.11GB 24.8s
+#5 transferring context: 5.20GB 29.8s
+#5 transferring context: 6.11GB 34.8s
+#5 transferring context: 6.38GB 39.9s
+#5 transferring context: 6.99GB 44.9s
+#5 transferring context: 8.00GB 50.0s
+#5 transferring context: 9.02GB 55.1s
+#5 transferring context: 9.75GB 60.1s
+#5 transferring context: 10.51GB 64.0s done
+#5 DONE 64.1s
+
+#4 [web 1/9] FROM docker.io/library/python:3.10.0-buster@sha256:bb76a025d1ba1820c33197637d21484e439347cb18c59d1858f06425d0a3b403
+#4 CACHED
+
+#6 [web 2/9] COPY ./workspace/CT-CLIP/ /CT-CLIP
+#6 DONE 121.3s
+
+#7 [web 3/9] WORKDIR /CT-CLIP
+#7 DONE 0.1s
+
+#8 [web 4/9] RUN apt-get update -y && apt-get install libgl1 -y
+#8 1.032 Get:1 http://deb.debian.org/debian buster InRelease [122 kB]
+#8 1.035 Get:2 http://security.debian.org/debian-security buster/updates InRelease [34.8 kB]
+#8 1.064 Get:3 http://deb.debian.org/debian buster-updates InRelease [56.6 kB]
+#8 1.300 Get:4 http://security.debian.org/debian-security buster/updates/main amd64 Packages [610 kB]
+#8 1.431 Get:5 http://deb.debian.org/debian buster/main amd64 Packages [7909 kB]
+#8 1.560 Get:6 http://deb.debian.org/debian buster-updates/main amd64 Packages [8788 B]
+#8 2.643 Fetched 8741 kB in 2s (5362 kB/s)
+#8 2.643 Reading package lists...
+#8 3.310 Reading package lists...
+#8 3.966 Building dependency tree...
+#8 4.110 Reading state information...
+#8 4.218 The following additional packages will be installed:
+#8 4.218   libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm-nouveau2 libdrm-radeon1
+#8 4.218   libdrm2 libgl1-mesa-dri libglapi-mesa libglvnd0 libglx-mesa0 libglx0
+#8 4.218   libllvm7 libpciaccess0 libsensors-config libsensors5 libx11-xcb1
+#8 4.218   libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-present0 libxcb-sync1
+#8 4.218   libxdamage1 libxfixes3 libxshmfence1 libxxf86vm1
+#8 4.219 Suggested packages:
+#8 4.219   pciutils lm-sensors
+#8 4.344 The following NEW packages will be installed:
+#8 4.344   libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm-nouveau2 libdrm-radeon1
+#8 4.344   libdrm2 libgl1 libgl1-mesa-dri libglapi-mesa libglvnd0 libglx-mesa0 libglx0
+#8 4.345   libllvm7 libpciaccess0 libsensors-config libsensors5 libx11-xcb1
+#8 4.345   libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-present0 libxcb-sync1
+#8 4.345   libxdamage1 libxfixes3 libxshmfence1 libxxf86vm1
+#8 4.394 0 upgraded, 26 newly installed, 0 to remove and 168 not upgraded.
+#8 4.394 Need to get 21.3 MB of archives.
+#8 4.394 After this operation, 214 MB of additional disk space will be used.
+#8 4.394 Get:1 http://security.debian.org/debian-security buster/updates/main amd64 libx11-xcb1 amd64 2:1.6.7-1+deb10u4 [191 kB]
+#8 4.396 Get:2 http://deb.debian.org/debian buster/main amd64 libdrm-common all 2.4.97-1 [13.8 kB]
+#8 4.406 Get:3 http://deb.debian.org/debian buster/main amd64 libdrm2 amd64 2.4.97-1 [39.7 kB]
+#8 4.410 Get:4 http://deb.debian.org/debian buster/main amd64 libdrm-amdgpu1 amd64 2.4.97-1 [27.3 kB]
+#8 4.425 Get:5 http://deb.debian.org/debian buster/main amd64 libpciaccess0 amd64 0.14-1 [53.5 kB]
+#8 4.433 Get:6 http://deb.debian.org/debian buster/main amd64 libdrm-intel1 amd64 2.4.97-1 [69.8 kB]
+#8 4.433 Get:7 http://deb.debian.org/debian buster/main amd64 libdrm-nouveau2 amd64 2.4.97-1 [26.3 kB]
+#8 4.441 Get:8 http://deb.debian.org/debian buster/main amd64 libdrm-radeon1 amd64 2.4.97-1 [31.1 kB]
+#8 4.443 Get:9 http://deb.debian.org/debian buster/main amd64 libglapi-mesa amd64 18.3.6-2+deb10u1 [66.3 kB]
+#8 4.453 Get:10 http://deb.debian.org/debian buster/main amd64 libllvm7 amd64 1:7.0.1-8+deb10u2 [13.1 MB]
+#8 6.322 Get:11 http://deb.debian.org/debian buster/main amd64 libsensors-config all 1:3.5.0-3 [31.6 kB]
+#8 6.323 Get:12 http://deb.debian.org/debian buster/main amd64 libsensors5 amd64 1:3.5.0-3 [52.6 kB]
+#8 6.329 Get:13 http://deb.debian.org/debian buster/main amd64 libgl1-mesa-dri amd64 18.3.6-2+deb10u1 [6685 kB]
+#8 6.951 Get:14 http://deb.debian.org/debian buster/main amd64 libglvnd0 amd64 1.1.0-1 [48.6 kB]
+#8 6.953 Get:15 http://deb.debian.org/debian buster/main amd64 libxcb-dri2-0 amd64 1.13.1-2 [101 kB]
+#8 6.958 Get:16 http://deb.debian.org/debian buster/main amd64 libxcb-dri3-0 amd64 1.13.1-2 [100 kB]
+#8 6.965 Get:17 http://deb.debian.org/debian buster/main amd64 libxcb-glx0 amd64 1.13.1-2 [116 kB]
+#8 6.976 Get:18 http://deb.debian.org/debian buster/main amd64 libxcb-present0 amd64 1.13.1-2 [99.1 kB]
+#8 6.982 Get:19 http://deb.debian.org/debian buster/main amd64 libxcb-sync1 amd64 1.13.1-2 [103 kB]
+#8 6.989 Get:20 http://deb.debian.org/debian buster/main amd64 libxfixes3 amd64 1:5.0.3-1 [21.9 kB]
+#8 6.991 Get:21 http://deb.debian.org/debian buster/main amd64 libxdamage1 amd64 1:1.1.4-3+b3 [14.9 kB]
+#8 6.993 Get:22 http://deb.debian.org/debian buster/main amd64 libxshmfence1 amd64 1.3-1 [8820 B]
+#8 6.993 Get:23 http://deb.debian.org/debian buster/main amd64 libxxf86vm1 amd64 1:1.1.4-1+b2 [20.8 kB]
+#8 6.994 Get:24 http://deb.debian.org/debian buster/main amd64 libglx-mesa0 amd64 18.3.6-2+deb10u1 [180 kB]
+#8 7.006 Get:25 http://deb.debian.org/debian buster/main amd64 libglx0 amd64 1.1.0-1 [30.0 kB]
+#8 7.009 Get:26 http://deb.debian.org/debian buster/main amd64 libgl1 amd64 1.1.0-1 [91.1 kB]
+#8 7.362 debconf: delaying package configuration, since apt-utils is not installed
+#8 7.405 Fetched 21.3 MB in 3s (8044 kB/s)
+#8 7.480 Selecting previously unselected package libdrm-common.
+#8 7.480 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 24613 files and directories currently installed.)
+#8 7.965 Preparing to unpack .../00-libdrm-common_2.4.97-1_all.deb ...
+#8 7.978 Unpacking libdrm-common (2.4.97-1) ...
+#8 8.078 Selecting previously unselected package libdrm2:amd64.
+#8 8.081 Preparing to unpack .../01-libdrm2_2.4.97-1_amd64.deb ...
+#8 8.094 Unpacking libdrm2:amd64 (2.4.97-1) ...
+#8 8.169 Selecting previously unselected package libdrm-amdgpu1:amd64.
+#8 8.172 Preparing to unpack .../02-libdrm-amdgpu1_2.4.97-1_amd64.deb ...
+#8 8.181 Unpacking libdrm-amdgpu1:amd64 (2.4.97-1) ...
+#8 8.244 Selecting previously unselected package libpciaccess0:amd64.
+#8 8.246 Preparing to unpack .../03-libpciaccess0_0.14-1_amd64.deb ...
+#8 8.255 Unpacking libpciaccess0:amd64 (0.14-1) ...
+#8 8.324 Selecting previously unselected package libdrm-intel1:amd64.
+#8 8.326 Preparing to unpack .../04-libdrm-intel1_2.4.97-1_amd64.deb ...
+#8 8.335 Unpacking libdrm-intel1:amd64 (2.4.97-1) ...
+#8 8.408 Selecting previously unselected package libdrm-nouveau2:amd64.
+#8 8.409 Preparing to unpack .../05-libdrm-nouveau2_2.4.97-1_amd64.deb ...
+#8 8.416 Unpacking libdrm-nouveau2:amd64 (2.4.97-1) ...
+#8 8.503 Selecting previously unselected package libdrm-radeon1:amd64.
+#8 8.506 Preparing to unpack .../06-libdrm-radeon1_2.4.97-1_amd64.deb ...
+#8 8.514 Unpacking libdrm-radeon1:amd64 (2.4.97-1) ...
+#8 8.577 Selecting previously unselected package libglapi-mesa:amd64.
+#8 8.580 Preparing to unpack .../07-libglapi-mesa_18.3.6-2+deb10u1_amd64.deb ...
+#8 8.588 Unpacking libglapi-mesa:amd64 (18.3.6-2+deb10u1) ...
+#8 8.671 Selecting previously unselected package libllvm7:amd64.
+#8 8.672 Preparing to unpack .../08-libllvm7_1%3a7.0.1-8+deb10u2_amd64.deb ...
+#8 8.680 Unpacking libllvm7:amd64 (1:7.0.1-8+deb10u2) ...
+#8 9.942 Selecting previously unselected package libsensors-config.
+#8 9.945 Preparing to unpack .../09-libsensors-config_1%3a3.5.0-3_all.deb ...
+#8 9.951 Unpacking libsensors-config (1:3.5.0-3) ...
+#8 10.03 Selecting previously unselected package libsensors5:amd64.
+#8 10.03 Preparing to unpack .../10-libsensors5_1%3a3.5.0-3_amd64.deb ...
+#8 10.13 Unpacking libsensors5:amd64 (1:3.5.0-3) ...
+#8 10.20 Selecting previously unselected package libgl1-mesa-dri:amd64.
+#8 10.20 Preparing to unpack .../11-libgl1-mesa-dri_18.3.6-2+deb10u1_amd64.deb ...
+#8 10.22 Unpacking libgl1-mesa-dri:amd64 (18.3.6-2+deb10u1) ...
+#8 10.89 Selecting previously unselected package libglvnd0:amd64.
+#8 10.90 Preparing to unpack .../12-libglvnd0_1.1.0-1_amd64.deb ...
+#8 10.90 Unpacking libglvnd0:amd64 (1.1.0-1) ...
+#8 10.97 Selecting previously unselected package libx11-xcb1:amd64.
+#8 10.98 Preparing to unpack .../13-libx11-xcb1_2%3a1.6.7-1+deb10u4_amd64.deb ...
+#8 10.98 Unpacking libx11-xcb1:amd64 (2:1.6.7-1+deb10u4) ...
+#8 11.06 Selecting previously unselected package libxcb-dri2-0:amd64.
+#8 11.06 Preparing to unpack .../14-libxcb-dri2-0_1.13.1-2_amd64.deb ...
+#8 11.07 Unpacking libxcb-dri2-0:amd64 (1.13.1-2) ...
+#8 11.15 Selecting previously unselected package libxcb-dri3-0:amd64.
+#8 11.15 Preparing to unpack .../15-libxcb-dri3-0_1.13.1-2_amd64.deb ...
+#8 11.15 Unpacking libxcb-dri3-0:amd64 (1.13.1-2) ...
+#8 11.22 Selecting previously unselected package libxcb-glx0:amd64.
+#8 11.23 Preparing to unpack .../16-libxcb-glx0_1.13.1-2_amd64.deb ...
+#8 11.23 Unpacking libxcb-glx0:amd64 (1.13.1-2) ...
+#8 11.31 Selecting previously unselected package libxcb-present0:amd64.
+#8 11.31 Preparing to unpack .../17-libxcb-present0_1.13.1-2_amd64.deb ...
+#8 11.32 Unpacking libxcb-present0:amd64 (1.13.1-2) ...
+#8 11.38 Selecting previously unselected package libxcb-sync1:amd64.
+#8 11.39 Preparing to unpack .../18-libxcb-sync1_1.13.1-2_amd64.deb ...
+#8 11.39 Unpacking libxcb-sync1:amd64 (1.13.1-2) ...
+#8 11.47 Selecting previously unselected package libxfixes3:amd64.
+#8 11.47 Preparing to unpack .../19-libxfixes3_1%3a5.0.3-1_amd64.deb ...
+#8 11.48 Unpacking libxfixes3:amd64 (1:5.0.3-1) ...
+#8 11.55 Selecting previously unselected package libxdamage1:amd64.
+#8 11.55 Preparing to unpack .../20-libxdamage1_1%3a1.1.4-3+b3_amd64.deb ...
+#8 11.56 Unpacking libxdamage1:amd64 (1:1.1.4-3+b3) ...
+#8 11.63 Selecting previously unselected package libxshmfence1:amd64.
+#8 11.63 Preparing to unpack .../21-libxshmfence1_1.3-1_amd64.deb ...
+#8 11.64 Unpacking libxshmfence1:amd64 (1.3-1) ...
+#8 11.70 Selecting previously unselected package libxxf86vm1:amd64.
+#8 11.70 Preparing to unpack .../22-libxxf86vm1_1%3a1.1.4-1+b2_amd64.deb ...
+#8 11.71 Unpacking libxxf86vm1:amd64 (1:1.1.4-1+b2) ...
+#8 11.78 Selecting previously unselected package libglx-mesa0:amd64.
+#8 11.79 Preparing to unpack .../23-libglx-mesa0_18.3.6-2+deb10u1_amd64.deb ...
+#8 11.80 Unpacking libglx-mesa0:amd64 (18.3.6-2+deb10u1) ...
+#8 11.88 Selecting previously unselected package libglx0:amd64.
+#8 11.88 Preparing to unpack .../24-libglx0_1.1.0-1_amd64.deb ...
+#8 11.89 Unpacking libglx0:amd64 (1.1.0-1) ...
+#8 11.96 Selecting previously unselected package libgl1:amd64.
+#8 11.96 Preparing to unpack .../25-libgl1_1.1.0-1_amd64.deb ...
+#8 11.97 Unpacking libgl1:amd64 (1.1.0-1) ...
+#8 12.05 Setting up libxcb-dri3-0:amd64 (1.13.1-2) ...
+#8 12.07 Setting up libx11-xcb1:amd64 (2:1.6.7-1+deb10u4) ...
+#8 12.10 Setting up libpciaccess0:amd64 (0.14-1) ...
+#8 12.12 Setting up libglvnd0:amd64 (1.1.0-1) ...
+#8 12.14 Setting up libxcb-glx0:amd64 (1.13.1-2) ...
+#8 12.17 Setting up libsensors-config (1:3.5.0-3) ...
+#8 12.20 Setting up libxxf86vm1:amd64 (1:1.1.4-1+b2) ...
+#8 12.23 Setting up libxcb-present0:amd64 (1.13.1-2) ...
+#8 12.25 Setting up libxfixes3:amd64 (1:5.0.3-1) ...
+#8 12.27 Setting up libxcb-sync1:amd64 (1.13.1-2) ...
+#8 12.29 Setting up libsensors5:amd64 (1:3.5.0-3) ...
+#8 12.31 Setting up libglapi-mesa:amd64 (18.3.6-2+deb10u1) ...
+#8 12.34 Setting up libxcb-dri2-0:amd64 (1.13.1-2) ...
+#8 12.36 Setting up libxshmfence1:amd64 (1.3-1) ...
+#8 12.38 Setting up libllvm7:amd64 (1:7.0.1-8+deb10u2) ...
+#8 12.40 Setting up libdrm-common (2.4.97-1) ...
+#8 12.43 Setting up libxdamage1:amd64 (1:1.1.4-3+b3) ...
+#8 12.45 Setting up libdrm2:amd64 (2.4.97-1) ...
+#8 12.47 Setting up libdrm-amdgpu1:amd64 (2.4.97-1) ...
+#8 12.49 Setting up libdrm-nouveau2:amd64 (2.4.97-1) ...
+#8 12.52 Setting up libdrm-radeon1:amd64 (2.4.97-1) ...
+#8 12.54 Setting up libdrm-intel1:amd64 (2.4.97-1) ...
+#8 12.56 Setting up libgl1-mesa-dri:amd64 (18.3.6-2+deb10u1) ...
+#8 12.58 Setting up libglx-mesa0:amd64 (18.3.6-2+deb10u1) ...
+#8 12.61 Setting up libglx0:amd64 (1.1.0-1) ...
+#8 12.63 Setting up libgl1:amd64 (1.1.0-1) ...
+#8 12.65 Processing triggers for libc-bin (2.28-10) ...
+#8 DONE 13.6s
+
+#9 [web 5/9] RUN python3.10 -u -m pip install -U pymilvus
+#9 2.998 Collecting pymilvus
+#9 3.044   Downloading pymilvus-2.4.4-py3-none-any.whl (196 kB)
+#9 3.205 Collecting environs<=9.5.0
+#9 3.221   Downloading environs-9.5.0-py2.py3-none-any.whl (12 kB)
+#9 3.889 Collecting protobuf>=3.20.0
+#9 3.912   Downloading protobuf-5.27.2-cp38-abi3-manylinux2014_x86_64.whl (309 kB)
+#9 4.388 Collecting setuptools>=67
+#9 4.409   Downloading setuptools-71.0.3-py3-none-any.whl (2.3 MB)
+#9 6.355 Collecting grpcio<=1.63.0,>=1.49.1
+#9 6.374   Downloading grpcio-1.63.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.6 MB)
+#9 6.995 Collecting pandas>=1.2.4
+#9 7.012   Downloading pandas-2.2.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.0 MB)
+#9 7.344 Collecting milvus-lite<2.5.0,>=2.4.0
+#9 7.361   Downloading milvus_lite-2.4.8-py3-none-manylinux2014_x86_64.whl (49.4 MB)
+#9 8.411 Collecting ujson>=2.0.0
+#9 8.429   Downloading ujson-5.10.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (53 kB)
+#9 8.605 Collecting python-dotenv
+#9 8.623   Downloading python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+#9 8.770 Collecting marshmallow>=3.0.0
+#9 8.789   Downloading marshmallow-3.21.3-py3-none-any.whl (49 kB)
+#9 8.891 Collecting packaging>=17.0
+#9 8.908   Downloading packaging-24.1-py3-none-any.whl (53 kB)
+#9 9.067 Collecting tqdm
+#9 9.084   Downloading tqdm-4.66.4-py3-none-any.whl (78 kB)
+#9 9.245 Collecting tzdata>=2022.7
+#9 9.263   Downloading tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+#9 9.345 Collecting python-dateutil>=2.8.2
+#9 9.363   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#9 10.16 Collecting numpy>=1.22.4
+#9 10.18   Downloading numpy-2.0.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (19.3 MB)
+#9 10.64 Collecting pytz>=2020.1
+#9 10.66   Downloading pytz-2024.1-py2.py3-none-any.whl (505 kB)
+#9 10.76 Collecting six>=1.5
+#9 10.77   Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+#9 11.11 Installing collected packages: six, packaging, tzdata, tqdm, pytz, python-dotenv, python-dateutil, numpy, marshmallow, ujson, setuptools, protobuf, pandas, milvus-lite, grpcio, environs, pymilvus
+#9 15.32   Attempting uninstall: setuptools
+#9 15.32     Found existing installation: setuptools 57.5.0
+#9 15.41     Uninstalling setuptools-57.5.0:
+#9 16.14       Successfully uninstalled setuptools-57.5.0
+#9 25.98 Successfully installed environs-9.5.0 grpcio-1.63.0 marshmallow-3.21.3 milvus-lite-2.4.8 numpy-2.0.0 packaging-24.1 pandas-2.2.2 protobuf-5.27.2 pymilvus-2.4.4 python-dateutil-2.9.0.post0 python-dotenv-1.0.1 pytz-2024.1 setuptools-71.0.3 six-1.16.0 tqdm-4.66.4 tzdata-2024.1 ujson-5.10.0
+#9 25.98 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 26.12 WARNING: You are using pip version 21.2.4; however, version 24.1.2 is available.
+#9 26.12 You should consider upgrading via the '/usr/local/bin/python3.10 -m pip install --upgrade pip' command.
+#9 DONE 28.4s
+
+#10 [web 6/9] RUN python3.10 -u -m pip install -e /CT-CLIP/CT_CLIP
+#10 2.333 Obtaining file:///CT-CLIP/CT_CLIP
+#10 2.851 Collecting ImageNetV2_pytorch@ git+https://github.com/modestyachts/ImageNetV2_pytorch.git
+#10 2.851   Cloning https://github.com/modestyachts/ImageNetV2_pytorch.git to /tmp/pip-install-5u71ni_b/imagenetv2-pytorch_2b3c743ef5174b0e8a3b54eaeb262561
+#10 2.852   Running command git clone -q https://github.com/modestyachts/ImageNetV2_pytorch.git /tmp/pip-install-5u71ni_b/imagenetv2-pytorch_2b3c743ef5174b0e8a3b54eaeb262561
+#10 3.868   Resolved https://github.com/modestyachts/ImageNetV2_pytorch.git to commit 14d4456c39fe7f02a665544dd9fc37c1a5f8b635
+#10 4.516 Collecting beartype
+#10 4.567   Downloading beartype-0.18.5-py3-none-any.whl (917 kB)
+#10 4.705 Collecting einops>=0.6
+#10 4.725   Downloading einops-0.8.0-py3-none-any.whl (43 kB)
+#10 4.803 Collecting ftfy
+#10 4.821   Downloading ftfy-6.2.0-py3-none-any.whl (54 kB)
+#10 6.243 Collecting regex
+#10 6.261   Downloading regex-2024.5.15-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (775 kB)
+#10 6.476 Collecting torch==2.0.1
+#10 6.494   Downloading torch-2.0.1-cp310-cp310-manylinux1_x86_64.whl (619.9 MB)
+#10 23.34 Collecting torchvision
+#10 23.36   Downloading torchvision-0.18.1-cp310-cp310-manylinux1_x86_64.whl (7.0 MB)
+#10 23.60 Collecting XlsxWriter
+#10 23.62   Downloading XlsxWriter-3.2.0-py3-none-any.whl (159 kB)
+#10 23.80 Collecting h5py
+#10 23.82   Downloading h5py-3.11.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.3 MB)
+#10 24.48 Collecting matplotlib
+#10 24.50   Downloading matplotlib-3.9.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.3 MB)
+#10 24.71 Collecting seaborn
+#10 24.73   Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+#10 24.83 Collecting wilds
+#10 24.85   Downloading wilds-2.0.0-py3-none-any.whl (126 kB)
+#10 24.95 Collecting click
+#10 24.97   Downloading click-8.1.7-py3-none-any.whl (97 kB)
+#10 25.05 Collecting appdirs
+#10 25.06   Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+#10 25.13 Collecting attr
+#10 25.15   Downloading attr-0.3.2-py2.py3-none-any.whl (3.3 kB)
+#10 25.24 Collecting nltk
+#10 25.26   Downloading nltk-3.8.1-py3-none-any.whl (1.5 MB)
+#10 25.40 Collecting nvidia-cusparse-cu11==11.7.4.91
+#10 25.42   Downloading nvidia_cusparse_cu11-11.7.4.91-py3-none-manylinux1_x86_64.whl (173.2 MB)
+#10 29.56 Collecting nvidia-cuda-cupti-cu11==11.7.101
+#10 29.57   Downloading nvidia_cuda_cupti_cu11-11.7.101-py3-none-manylinux1_x86_64.whl (11.8 MB)
+#10 29.91 Collecting nvidia-cudnn-cu11==8.5.0.96
+#10 29.94   Downloading nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
+#10 53.85 Collecting triton==2.0.0
+#10 53.87   Downloading triton-2.0.0-1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (63.3 MB)
+#10 57.80 Collecting nvidia-nccl-cu11==2.14.3
+#10 57.82   Downloading nvidia_nccl_cu11-2.14.3-py3-none-manylinux1_x86_64.whl (177.1 MB)
+#10 68.15 Collecting nvidia-cusolver-cu11==11.4.0.1
+#10 68.16   Downloading nvidia_cusolver_cu11-11.4.0.1-2-py3-none-manylinux1_x86_64.whl (102.6 MB)
+#10 72.85 Collecting sympy
+#10 72.87   Downloading sympy-1.13.1-py3-none-any.whl (6.2 MB)
+#10 73.16 Collecting nvidia-curand-cu11==10.2.10.91
+#10 73.18   Downloading nvidia_curand_cu11-10.2.10.91-py3-none-manylinux1_x86_64.whl (54.6 MB)
+#10 74.81 Collecting nvidia-cufft-cu11==10.9.0.58
+#10 74.83   Downloading nvidia_cufft_cu11-10.9.0.58-py3-none-manylinux1_x86_64.whl (168.4 MB)
+#10 80.23 Collecting nvidia-cuda-runtime-cu11==11.7.99
+#10 80.25   Downloading nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
+#10 80.32 Collecting nvidia-cublas-cu11==11.10.3.66
+#10 80.34   Downloading nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
+#10 89.62 Collecting filelock
+#10 89.64   Downloading filelock-3.15.4-py3-none-any.whl (16 kB)
+#10 89.75 Collecting networkx
+#10 89.77   Downloading networkx-3.3-py3-none-any.whl (1.7 MB)
+#10 89.89 Collecting jinja2
+#10 89.91   Downloading jinja2-3.1.4-py3-none-any.whl (133 kB)
+#10 90.00 Collecting nvidia-nvtx-cu11==11.7.91
+#10 90.01   Downloading nvidia_nvtx_cu11-11.7.91-py3-none-manylinux1_x86_64.whl (98 kB)
+#10 90.11 Collecting nvidia-cuda-nvrtc-cu11==11.7.99
+#10 90.13   Downloading nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
+#10 90.63 Collecting typing-extensions
+#10 90.65   Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+#10 90.68 Requirement already satisfied: wheel in /usr/local/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch==2.0.1->ct-clip==0.1) (0.37.0)
+#10 90.69 Requirement already satisfied: setuptools in /usr/local/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch==2.0.1->ct-clip==0.1) (71.0.3)
+#10 91.18 Collecting cmake
+#10 91.20   Downloading cmake-3.30.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (26.9 MB)
+#10 92.24 Collecting lit
+#10 92.26   Downloading lit-18.1.8-py3-none-any.whl (96 kB)
+#10 92.45 Collecting wcwidth<0.3.0,>=0.2.12
+#10 92.47   Downloading wcwidth-0.2.13-py2.py3-none-any.whl (34 kB)
+#10 92.53 Requirement already satisfied: numpy>=1.17.3 in /usr/local/lib/python3.10/site-packages (from h5py->ct-clip==0.1) (2.0.0)
+#10 92.77 Collecting MarkupSafe>=2.0
+#10 92.79   Downloading MarkupSafe-2.1.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+#10 92.98 Collecting pyparsing>=2.3.1
+#10 93.00   Downloading pyparsing-3.1.2-py3-none-any.whl (103 kB)
+#10 93.85 Collecting pillow>=8
+#10 93.87   Downloading pillow-10.4.0-cp310-cp310-manylinux_2_28_x86_64.whl (4.5 MB)
+#10 94.00 Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/site-packages (from matplotlib->ct-clip==0.1) (24.1)
+#10 94.27 Collecting contourpy>=1.0.1
+#10 94.29   Downloading contourpy-1.2.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (305 kB)
+#10 94.36 Collecting cycler>=0.10
+#10 94.38   Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#10 94.79 Collecting fonttools>=4.22.0
+#10 94.81   Downloading fonttools-4.53.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.6 MB)
+#10 95.19 Collecting kiwisolver>=1.3.1
+#10 95.20   Downloading kiwisolver-1.4.5-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+#10 95.30 Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/site-packages (from matplotlib->ct-clip==0.1) (2.9.0.post0)
+#10 95.46 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib->ct-clip==0.1) (1.16.0)
+#10 95.59 Collecting joblib
+#10 95.65   Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+#10 95.76 Requirement already satisfied: tqdm in /usr/local/lib/python3.10/site-packages (from nltk->ct-clip==0.1) (4.66.4)
+#10 95.81 Requirement already satisfied: pandas>=1.2 in /usr/local/lib/python3.10/site-packages (from seaborn->ct-clip==0.1) (2.2.2)
+#10 95.90 Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.10/site-packages (from pandas>=1.2->seaborn->ct-clip==0.1) (2024.1)
+#10 95.90 Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/site-packages (from pandas>=1.2->seaborn->ct-clip==0.1) (2024.1)
+#10 96.04 Collecting mpmath<1.4,>=1.1.0
+#10 96.05   Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+#10 96.14 Collecting torchvision
+#10 96.16   Downloading torchvision-0.18.0-cp310-cp310-manylinux1_x86_64.whl (7.0 MB)
+#10 96.36   Downloading torchvision-0.17.2-cp310-cp310-manylinux1_x86_64.whl (6.9 MB)
+#10 96.57   Downloading torchvision-0.17.1-cp310-cp310-manylinux1_x86_64.whl (6.9 MB)
+#10 96.77   Downloading torchvision-0.17.0-cp310-cp310-manylinux1_x86_64.whl (6.9 MB)
+#10 97.04 Collecting requests
+#10 97.07   Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+#10 97.11 Collecting torchvision
+#10 97.12   Downloading torchvision-0.16.2-cp310-cp310-manylinux1_x86_64.whl (6.8 MB)
+#10 97.38   Downloading torchvision-0.16.1-cp310-cp310-manylinux1_x86_64.whl (6.8 MB)
+#10 97.61   Downloading torchvision-0.16.0-cp310-cp310-manylinux1_x86_64.whl (6.9 MB)
+#10 97.92   Downloading torchvision-0.15.2-cp310-cp310-manylinux1_x86_64.whl (6.0 MB)
+#10 98.41 Collecting charset-normalizer<4,>=2
+#10 98.43   Downloading charset_normalizer-3.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (142 kB)
+#10 98.53 Collecting idna<4,>=2.5
+#10 98.55   Downloading idna-3.7-py3-none-any.whl (66 kB)
+#10 98.69 Collecting urllib3<3,>=1.21.1
+#10 98.71   Downloading urllib3-2.2.2-py3-none-any.whl (121 kB)
+#10 98.81 Collecting certifi>=2017.4.17
+#10 98.83   Downloading certifi-2024.7.4-py3-none-any.whl (162 kB)
+#10 99.29 Collecting scikit-learn>=0.20.0
+#10 99.31   Downloading scikit_learn-1.5.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.4 MB)
+#10 100.1 Collecting scipy>=1.5.4
+#10 100.2   Downloading scipy-1.14.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (41.1 MB)
+#10 101.3 Collecting outdated>=0.2.0
+#10 101.4   Downloading outdated-0.2.2-py2.py3-none-any.whl (7.5 kB)
+#10 101.5 Collecting ogb>=1.2.6
+#10 101.5   Downloading ogb-1.3.6-py3-none-any.whl (78 kB)
+#10 101.7 Collecting littleutils
+#10 101.7   Downloading littleutils-0.2.4-py3-none-any.whl (8.1 kB)
+#10 101.8 Collecting threadpoolctl>=3.1.0
+#10 101.9   Downloading threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+#10 102.1 Building wheels for collected packages: ImageNetV2-pytorch
+#10 102.1   Building wheel for ImageNetV2-pytorch (setup.py): started
+#10 102.7   Building wheel for ImageNetV2-pytorch (setup.py): finished with status 'done'
+#10 102.7   Created wheel for ImageNetV2-pytorch: filename=imagenetv2_pytorch-0.1-py3-none-any.whl size=2658 sha256=87e49a486c67dd7963d7b87944d0d8cc9b2e5647f946e96aeac79a4518af4ec5
+#10 102.7   Stored in directory: /tmp/pip-ephem-wheel-cache-qs7atqhz/wheels/1f/7e/65/d45104c582d4a7127799588b0f65a16d0e9b8212417d778af6
+#10 102.7 Successfully built ImageNetV2-pytorch
+#10 103.2 Installing collected packages: urllib3, nvidia-cublas-cu11, mpmath, MarkupSafe, lit, idna, filelock, cmake, charset-normalizer, certifi, typing-extensions, triton, threadpoolctl, sympy, scipy, requests, nvidia-nvtx-cu11, nvidia-nccl-cu11, nvidia-cusparse-cu11, nvidia-cusolver-cu11, nvidia-curand-cu11, nvidia-cufft-cu11, nvidia-cudnn-cu11, nvidia-cuda-runtime-cu11, nvidia-cuda-nvrtc-cu11, nvidia-cuda-cupti-cu11, networkx, littleutils, joblib, jinja2, torch, scikit-learn, pyparsing, pillow, outdated, kiwisolver, fonttools, cycler, contourpy, wcwidth, torchvision, regex, ogb, matplotlib, click, XlsxWriter, wilds, seaborn, nltk, ImageNetV2-pytorch, h5py, ftfy, einops, beartype, attr, appdirs, ct-clip
+#10 173.4   Running setup.py develop for ct-clip
+#10 174.6 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 174.6 Successfully installed ImageNetV2-pytorch-0.1 MarkupSafe-2.1.5 XlsxWriter-3.2.0 appdirs-1.4.4 attr-0.3.2 beartype-0.18.5 certifi-2024.7.4 charset-normalizer-3.3.2 click-8.1.7 cmake-3.30.0 contourpy-1.2.1 ct-clip-0.1 cycler-0.12.1 einops-0.8.0 filelock-3.15.4 fonttools-4.53.1 ftfy-6.2.0 h5py-3.11.0 idna-3.7 jinja2-3.1.4 joblib-1.4.2 kiwisolver-1.4.5 lit-18.1.8 littleutils-0.2.4 matplotlib-3.9.1 mpmath-1.3.0 networkx-3.3 nltk-3.8.1 nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-cupti-cu11-11.7.101 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 nvidia-cufft-cu11-10.9.0.58 nvidia-curand-cu11-10.2.10.91 nvidia-cusolver-cu11-11.4.0.1 nvidia-cusparse-cu11-11.7.4.91 nvidia-nccl-cu11-2.14.3 nvidia-nvtx-cu11-11.7.91 ogb-1.3.6 outdated-0.2.2 pillow-10.4.0 pyparsing-3.1.2 regex-2024.5.15 requests-2.32.3 scikit-learn-1.5.1 scipy-1.14.0 seaborn-0.13.2 sympy-1.13.1 threadpoolctl-3.5.0 torch-2.0.1 torchvision-0.15.2 triton-2.0.0 typing-extensions-4.12.2 urllib3-2.2.2 wcwidth-0.2.13 wilds-2.0.0
+#10 174.6 WARNING: You are using pip version 21.2.4; however, version 24.1.2 is available.
+#10 174.6 You should consider upgrading via the '/usr/local/bin/python3.10 -m pip install --upgrade pip' command.
+#10 DONE 182.7s
+
+#11 [web 7/9] RUN python3.10 -u -m pip install -e /CT-CLIP/transformer_maskgit
+#11 1.789 Obtaining file:///CT-CLIP/transformer_maskgit
+#11 2.426 Collecting accelerate
+#11 2.469   Downloading accelerate-0.32.1-py3-none-any.whl (314 kB)
+#11 2.518 Requirement already satisfied: beartype in /usr/local/lib/python3.10/site-packages (from transformer_maskgit==0.0.0) (0.18.5)
+#11 2.519 Requirement already satisfied: einops>=0.6 in /usr/local/lib/python3.10/site-packages (from transformer_maskgit==0.0.0) (0.8.0)
+#11 2.574 Collecting ema-pytorch>=0.2.2
+#11 2.586   Downloading ema_pytorch-0.5.1-py3-none-any.whl (8.7 kB)
+#11 2.906 Collecting opencv-python
+#11 2.919   Downloading opencv_python-4.10.0.84-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (62.5 MB)
+#11 4.112 Requirement already satisfied: pillow in /usr/local/lib/python3.10/site-packages (from transformer_maskgit==0.0.0) (10.4.0)
+#11 4.119 Requirement already satisfied: numpy in /usr/local/lib/python3.10/site-packages (from transformer_maskgit==0.0.0) (2.0.0)
+#11 4.300 Collecting sentencepiece
+#11 4.312   Downloading sentencepiece-0.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+#11 4.356 Requirement already satisfied: torch==2.0.1 in /usr/local/lib/python3.10/site-packages (from transformer_maskgit==0.0.0) (2.0.1)
+#11 4.408 Collecting torchtyping
+#11 4.420   Downloading torchtyping-0.1.4-py3-none-any.whl (17 kB)
+#11 4.430 Requirement already satisfied: torchvision in /usr/local/lib/python3.10/site-packages (from transformer_maskgit==0.0.0) (0.15.2)
+#11 4.536 Collecting transformers==4.30.1
+#11 4.548   Downloading transformers-4.30.1-py3-none-any.whl (7.2 MB)
+#11 4.748 Requirement already satisfied: tqdm in /usr/local/lib/python3.10/site-packages (from transformer_maskgit==0.0.0) (4.66.4)
+#11 4.889 Collecting vector-quantize-pytorch==1.1.2
+#11 4.905   Downloading vector_quantize_pytorch-1.1.2-py3-none-any.whl (10.0 kB)
+#11 4.979 Collecting nibabel
+#11 4.993   Downloading nibabel-5.2.1-py3-none-any.whl (3.3 MB)
+#11 5.140 Collecting openpyxl
+#11 5.154   Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+#11 5.197 Requirement already satisfied: typing-extensions in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (4.12.2)
+#11 5.198 Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (3.1.4)
+#11 5.198 Requirement already satisfied: nvidia-cusparse-cu11==11.7.4.91 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (11.7.4.91)
+#11 5.200 Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (11.7.99)
+#11 5.201 Requirement already satisfied: nvidia-cudnn-cu11==8.5.0.96 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (8.5.0.96)
+#11 5.201 Requirement already satisfied: sympy in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (1.13.1)
+#11 5.202 Requirement already satisfied: nvidia-cuda-cupti-cu11==11.7.101 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (11.7.101)
+#11 5.203 Requirement already satisfied: nvidia-nccl-cu11==2.14.3 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (2.14.3)
+#11 5.206 Requirement already satisfied: networkx in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (3.3)
+#11 5.207 Requirement already satisfied: nvidia-nvtx-cu11==11.7.91 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (11.7.91)
+#11 5.208 Requirement already satisfied: filelock in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (3.15.4)
+#11 5.240 Requirement already satisfied: triton==2.0.0 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (2.0.0)
+#11 5.241 Requirement already satisfied: nvidia-cufft-cu11==10.9.0.58 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (10.9.0.58)
+#11 5.243 Requirement already satisfied: nvidia-cusolver-cu11==11.4.0.1 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (11.4.0.1)
+#11 5.243 Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (11.10.3.66)
+#11 5.244 Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (11.7.99)
+#11 5.245 Requirement already satisfied: nvidia-curand-cu11==10.2.10.91 in /usr/local/lib/python3.10/site-packages (from torch==2.0.1->transformer_maskgit==0.0.0) (10.2.10.91)
+#11 5.247 Requirement already satisfied: setuptools in /usr/local/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch==2.0.1->transformer_maskgit==0.0.0) (71.0.3)
+#11 5.247 Requirement already satisfied: wheel in /usr/local/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch==2.0.1->transformer_maskgit==0.0.0) (0.37.0)
+#11 6.072 Collecting safetensors>=0.3.1
+#11 6.084   Downloading safetensors-0.4.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+#11 6.118 Requirement already satisfied: requests in /usr/local/lib/python3.10/site-packages (from transformers==4.30.1->transformer_maskgit==0.0.0) (2.32.3)
+#11 6.247 Collecting pyyaml>=5.1
+#11 6.261   Downloading PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (705 kB)
+#11 6.999 Collecting tokenizers!=0.11.3,<0.14,>=0.11.1
+#11 7.012   Downloading tokenizers-0.13.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.8 MB)
+#11 7.212 Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/site-packages (from transformers==4.30.1->transformer_maskgit==0.0.0) (24.1)
+#11 7.214 Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.10/site-packages (from transformers==4.30.1->transformer_maskgit==0.0.0) (2024.5.15)
+#11 7.309 Collecting huggingface-hub<1.0,>=0.14.1
+#11 7.323   Downloading huggingface_hub-0.24.0-py3-none-any.whl (419 kB)
+#11 7.351 Requirement already satisfied: lit in /usr/local/lib/python3.10/site-packages (from triton==2.0.0->torch==2.0.1->transformer_maskgit==0.0.0) (18.1.8)
+#11 7.352 Requirement already satisfied: cmake in /usr/local/lib/python3.10/site-packages (from triton==2.0.0->torch==2.0.1->transformer_maskgit==0.0.0) (3.30.0)
+#11 7.539 Collecting fsspec>=2023.5.0
+#11 7.551   Downloading fsspec-2024.6.1-py3-none-any.whl (177 kB)
+#11 8.027 Collecting psutil
+#11 8.044   Downloading psutil-6.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (290 kB)
+#11 8.800 Collecting numpy
+#11 8.812   Downloading numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+#11 9.331 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/site-packages (from jinja2->torch==2.0.1->transformer_maskgit==0.0.0) (2.1.5)
+#11 9.471 Collecting et-xmlfile
+#11 9.485   Downloading et_xmlfile-1.1.0-py3-none-any.whl (4.7 kB)
+#11 9.575 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.30.1->transformer_maskgit==0.0.0) (2024.7.4)
+#11 9.576 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.30.1->transformer_maskgit==0.0.0) (3.7)
+#11 9.580 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.30.1->transformer_maskgit==0.0.0) (2.2.2)
+#11 9.581 Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.30.1->transformer_maskgit==0.0.0) (3.3.2)
+#11 9.603 Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/site-packages (from sympy->torch==2.0.1->transformer_maskgit==0.0.0) (1.3.0)
+#11 9.680 Collecting typeguard>=2.11.1
+#11 9.694   Downloading typeguard-4.3.0-py3-none-any.whl (35 kB)
+#11 10.79 Installing collected packages: pyyaml, fsspec, typeguard, tokenizers, safetensors, psutil, numpy, huggingface-hub, et-xmlfile, vector-quantize-pytorch, transformers, torchtyping, sentencepiece, openpyxl, opencv-python, nibabel, ema-pytorch, accelerate, transformer-maskgit
+#11 11.47   Attempting uninstall: numpy
+#11 11.47     Found existing installation: numpy 2.0.0
+#11 11.63     Uninstalling numpy-2.0.0:
+#11 13.77       Successfully uninstalled numpy-2.0.0
+#11 22.39   Running setup.py develop for transformer-maskgit
+#11 23.97 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 23.97 Successfully installed accelerate-0.32.1 ema-pytorch-0.5.1 et-xmlfile-1.1.0 fsspec-2024.6.1 huggingface-hub-0.24.0 nibabel-5.2.1 numpy-1.26.4 opencv-python-4.10.0.84 openpyxl-3.1.5 psutil-6.0.0 pyyaml-6.0.1 safetensors-0.4.3 sentencepiece-0.2.0 tokenizers-0.13.3 torchtyping-0.1.4 transformer-maskgit-0.0.0 transformers-4.30.1 typeguard-4.3.0 vector-quantize-pytorch-1.1.2
+#11 23.98 WARNING: You are using pip version 21.2.4; however, version 24.1.2 is available.
+#11 23.98 You should consider upgrading via the '/usr/local/bin/python3.10 -m pip install --upgrade pip' command.
+#11 DONE 26.1s
+
+#12 [web 8/9] RUN python3.10 -u -m pip install -U transformers==4.23.1
+#12 1.741 Collecting transformers==4.23.1
+#12 1.792   Downloading transformers-4.23.1-py3-none-any.whl (5.3 MB)
+#12 2.298 Requirement already satisfied: requests in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (2.32.3)
+#12 2.298 Requirement already satisfied: tokenizers!=0.11.3,<0.14,>=0.11.1 in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (0.13.3)
+#12 2.299 Requirement already satisfied: tqdm>=4.27 in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (4.66.4)
+#12 2.300 Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (2024.5.15)
+#12 2.300 Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (6.0.1)
+#12 2.301 Requirement already satisfied: filelock in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (3.15.4)
+#12 2.301 Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (24.1)
+#12 2.302 Requirement already satisfied: huggingface-hub<1.0,>=0.10.0 in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (0.24.0)
+#12 2.303 Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.10/site-packages (from transformers==4.23.1) (1.26.4)
+#12 2.380 Requirement already satisfied: typing-extensions>=3.7.4.3 in /usr/local/lib/python3.10/site-packages (from huggingface-hub<1.0,>=0.10.0->transformers==4.23.1) (4.12.2)
+#12 2.382 Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.10/site-packages (from huggingface-hub<1.0,>=0.10.0->transformers==4.23.1) (2024.6.1)
+#12 2.505 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.23.1) (2.2.2)
+#12 2.505 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.23.1) (2024.7.4)
+#12 2.505 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.23.1) (3.7)
+#12 2.506 Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/site-packages (from requests->transformers==4.23.1) (3.3.2)
+#12 3.774 Installing collected packages: transformers
+#12 3.774   Attempting uninstall: transformers
+#12 3.774     Found existing installation: transformers 4.30.1
+#12 4.130     Uninstalling transformers-4.30.1:
+#12 5.050       Successfully uninstalled transformers-4.30.1
+#12 8.072 Successfully installed transformers-4.23.1
+#12 8.072 ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+#12 8.072 transformer-maskgit 0.0.0 requires transformers==4.30.1, but you have transformers 4.23.1 which is incompatible.
+#12 8.072 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 8.077 WARNING: You are using pip version 21.2.4; however, version 24.1.2 is available.
+#12 8.077 You should consider upgrading via the '/usr/local/bin/python3.10 -m pip install --upgrade pip' command.
+#12 DONE 8.4s
+
+#13 [web 9/9] RUN python3 -u scripts/load.py PROJECT_ID SUBJECT_ID SESSION_ID SCAN_ID test
+#13 0.492 ERROR: ld.so: object '/usr/local/lib/python3.10/site-packages/sklearn/utils/../../scikit_learn.libs/libgomp-d22c30c5.so.1.0.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+#13 0.493 ERROR: ld.so: object '/usr/local/lib/python3.10/site-packages/sklearn/utils/../../scikit_learn.libs/libgomp-d22c30c5.so.1.0.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+#13 0.527 python3: can't open file '/CT-CLIP/scripts/load.py': [Errno 2] No such file or directory
+#13 ERROR: process "/bin/sh -c python3 -u scripts/load.py PROJECT_ID SUBJECT_ID SESSION_ID SCAN_ID test" did not complete successfully: exit code: 2
+------
+ > [web 9/9] RUN python3 -u scripts/load.py PROJECT_ID SUBJECT_ID SESSION_ID SCAN_ID test:
+0.492 ERROR: ld.so: object '/usr/local/lib/python3.10/site-packages/sklearn/utils/../../scikit_learn.libs/libgomp-d22c30c5.so.1.0.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+0.493 ERROR: ld.so: object '/usr/local/lib/python3.10/site-packages/sklearn/utils/../../scikit_learn.libs/libgomp-d22c30c5.so.1.0.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+0.527 python3: can't open file '/CT-CLIP/scripts/load.py': [Errno 2] No such file or directory
+------
+failed to solve: process "/bin/sh -c python3 -u scripts/load.py PROJECT_ID SUBJECT_ID SESSION_ID SCAN_ID test" did not complete successfully: exit code: 2
+time="2024-07-19T17:17:24Z" level=warning msg="/home/ec2-user/embeddingsdockerimage/docker-compose.yml: `version` is obsolete"
+#0 building with "default" instance using docker driver
+
+#1 [web internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [web internal] load build definition from Dockerfile
+#2 transferring dockerfile: 726B done
+#2 DONE 0.0s
+
+#3 [web internal] load metadata for docker.io/library/python:3.10.0-buster
+#3 DONE 0.4s
+
+#4 [web 1/9] FROM docker.io/library/python:3.10.0-buster@sha256:bb76a025d1ba1820c33197637d21484e439347cb18c59d1858f06425d0a3b403
+#4 DONE 0.0s
+
+#5 [web internal] load build context
+#5 transferring context: 22.57kB done
+#5 DONE 0.0s
+
+#6 [web 4/9] RUN apt-get update -y && apt-get install libgl1 -y
+#6 CACHED
+
+#7 [web 6/9] RUN python3.10 -u -m pip install -e /CT-CLIP/CT_CLIP
+#7 CACHED
+
+#8 [web 7/9] RUN python3.10 -u -m pip install -e /CT-CLIP/transformer_maskgit
+#8 CACHED
+
+#9 [web 3/9] WORKDIR /CT-CLIP
+#9 CACHED
+
+#10 [web 5/9] RUN python3.10 -u -m pip install -U pymilvus
+#10 CACHED
+
+#11 [web 2/9] COPY ./workspace/CT-CLIP/ /CT-CLIP
+#11 CACHED
+
+#12 [web 8/9] RUN python3.10 -u -m pip install -U transformers==4.23.1
+#12 CACHED
+
+#13 [web 9/9] RUN python3 -u scripts/preload.py PROJECT_ID SUBJECT_ID SESSION_ID SCAN_ID test
+#13 0.321 ERROR: ld.so: object '/usr/local/lib/python3.10/site-packages/sklearn/utils/../../scikit_learn.libs/libgomp-d22c30c5.so.1.0.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+#13 0.323 ERROR: ld.so: object '/usr/local/lib/python3.10/site-packages/sklearn/utils/../../scikit_learn.libs/libgomp-d22c30c5.so.1.0.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+#13 3.802 ERROR: ld.so: object '/usr/local/lib/python3.10/site-packages/sklearn/utils/../../scikit_learn.libs/libgomp-d22c30c5.so.1.0.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+#13 3.811 ERROR: ld.so: object '/usr/local/lib/python3.10/site-packages/sklearn/utils/../../scikit_learn.libs/libgomp-d22c30c5.so.1.0.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+#13 4.723 /usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:1150: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+#13 4.723   warnings.warn(
+#13 18.92 /report/report.csv False
+#13 18.92 /label/label.csv False
+#13 DONE 85.4s
+
+#14 [web] exporting to image
+#14 exporting layers
+#14 exporting layers 136.7s done
+#14 writing image sha256:d6e1c6f13c4d66662a4078f72afb044d80fa91cb18dbc2e3bc8b1e185869df59 done
+#14 naming to docker.io/library/embeddingsdockerimage-web 0.0s done
+#14 DONE 136.8s
+ Container embeddingsdockerimage-web-1  Recreate
+ Container embeddingsdockerimage-web-1  Recreated
+Attaching to web-1
+web-1  | ERROR: ld.so: object '/usr/local/lib/python3.10/site-packages/sklearn/utils/../../scikit_learn.libs/libgomp-d22c30c5.so.1.0.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+web-1  | The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+web-1  | Moving 0 files to the new cache system
+web-1  | 0it [00:00, ?it/s]0it [00:00, ?it/s]
+web-1  | /usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:1150: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+web-1  |   warnings.warn(
+web-1  | reports.csv True
+web-1  | labels.csv True
+web-1  |   0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 73.32it/s]
+web-1  |   0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:13<00:13, 13.08s/it]100%|██████████| 2/2 [00:18<00:00,  8.36s/it]100%|██████████| 2/2 [00:18<00:00,  9.07s/it]
+web-1  | ('Multiple venous collaterals are present in the anterior left chest wall and are associated with the anterior jugular vein at the level of the right sternoclavicular junction. Left subclavian vein collapsed chronic occlusion pathology?. Trachea, both main bronchi are open. Calcific plaques are observed in the aortic arch. Other mediastinal main vascular structures, heart contour, size are normal. Thoracic aorta diameter is normal. Pericardial effusion-thickening was not observed. Thoracic esophagus calibration was normal and no significant tumoral wall thickening was detected. No enlarged lymph nodes in prevascular, pre-paratracheal, subcarinal or bilateral hilar-axillary pathological dimensions were detected. When examined in the lung parenchyma window; Linear atelectasis is present in both lung parenchyma. Subsegmental atelectasis is observed in the right middle lobe. Thickening of the bronchial wall and peribronchial budding tree-like reticulonodular densities are observed in the bilateral lower lobes. Peribronchial minimal consolidation is seen in the lower lobes in places. The findings were evaluated primarily in favor of the infectious process. The left kidney partially entering the section is atrophic. The right kidney could not be evaluated because it did not enter the section. Other upper abdominal organs included in the sections are normal. No space-occupying lesion was detected in the liver that entered the cross-sectional area. Bilateral adrenal glands were normal and no space-occupying lesion was detected. There are osteophytes with anterior extension in the thoracic vertebrae. Multiple venous collaterals in the anterior left chest wall and collapsed appearance in the left subclavian vein chronic occlusion?.  Thickening of the bronchial wall in both lungs.  Peribronchial reticulonodular densities in the lower lobes, minimal consolidations infection process?.  Atelectasis in both lungs.  Thoracic spondylosis.',)
+web-1  | acc_name:  ('train_1_a_2.npz',)
+web-1  | valid_data:  tensor([[[[[-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            ...,
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.]],
+web-1  | 
+web-1  |           [[-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            ...,
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.]],
+web-1  | 
+web-1  |           [[-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            ...,
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.]],
+web-1  | 
+web-1  |           ...,
+web-1  | 
+web-1  |           [[-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            ...,
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.]],
+web-1  | 
+web-1  |           [[-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            ...,
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.]],
+web-1  | 
+web-1  |           [[-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            ...,
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.]]]]])
+web-1  | torch.Size([1, 512])
+web-1  | torch.Size([1, 512, 768])
+web-1  | torch.Size([1, 16, 16, 16, 512])
+web-1  | torch.Size([1, 2097152])
+web-1  | Test latent shape
+web-1  | torch.Size([1, 512])
+web-1  | torch.Size([1, 512])
+web-1  | torch.Size([1, 512])
+web-1  | ('Multiple venous collaterals are present in the anterior left chest wall and are associated with the anterior jugular vein at the level of the right sternoclavicular junction. Left subclavian vein collapsed chronic occlusion pathology?. Trachea, both main bronchi are open. Calcific plaques are observed in the aortic arch. Other mediastinal main vascular structures, heart contour, size are normal. Thoracic aorta diameter is normal. Pericardial effusion-thickening was not observed. Thoracic esophagus calibration was normal and no significant tumoral wall thickening was detected. No enlarged lymph nodes in prevascular, pre-paratracheal, subcarinal or bilateral hilar-axillary pathological dimensions were detected. When examined in the lung parenchyma window; Linear atelectasis is present in both lung parenchyma. Subsegmental atelectasis is observed in the right middle lobe. Thickening of the bronchial wall and peribronchial budding tree-like reticulonodular densities are observed in the bilateral lower lobes. Peribronchial minimal consolidation is seen in the lower lobes in places. The findings were evaluated primarily in favor of the infectious process. The left kidney partially entering the section is atrophic. The right kidney could not be evaluated because it did not enter the section. Other upper abdominal organs included in the sections are normal. No space-occupying lesion was detected in the liver that entered the cross-sectional area. Bilateral adrenal glands were normal and no space-occupying lesion was detected. There are osteophytes with anterior extension in the thoracic vertebrae. Multiple venous collaterals in the anterior left chest wall and collapsed appearance in the left subclavian vein chronic occlusion?.  Thickening of the bronchial wall in both lungs.  Peribronchial reticulonodular densities in the lower lobes, minimal consolidations infection process?.  Atelectasis in both lungs.  Thoracic spondylosis.',)
+web-1  | acc_name:  ('train_1_a_1.npz',)
+web-1  | valid_data:  tensor([[[[[-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            ...,
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.]],
+web-1  | 
+web-1  |           [[-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            ...,
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.]],
+web-1  | 
+web-1  |           [[-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            ...,
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.]],
+web-1  | 
+web-1  |           ...,
+web-1  | 
+web-1  |           [[-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            ...,
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.]],
+web-1  | 
+web-1  |           [[-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            ...,
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.]],
+web-1  | 
+web-1  |           [[-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            ...,
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.],
+web-1  |            [-1., -1., -1.,  ..., -1., -1., -1.]]]]])
+web-1  | torch.Size([1, 512])
+web-1  | torch.Size([1, 512, 768])
+web-1  | torch.Size([1, 16, 16, 16, 512])
+web-1  | torch.Size([1, 2097152])
+web-1  | Test latent shape
+web-1  | torch.Size([1, 512])
+web-1  | torch.Size([1, 512])
+web-1  | torch.Size([1, 512])
+web-1  | Inference complete
+web-1  | ['train_1_a_2.image.npy', 'train_1_a_2.text.npy', 'train_1_a_1.image.npy', 'train_1_a_1.text.npy']
+web-1  | Done.
+[Kweb-1 exited with code 0
