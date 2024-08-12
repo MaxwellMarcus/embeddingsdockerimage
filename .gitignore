@@ -1,2 +1,9 @@
-workspace/workspace
-workspace/model_weights
+workspace/CT-CLIP/out/*
+workspace/CT-CLIP/input/*
+workspace/CT-CLIP/batch/*
+workspace/CT-CLIP/train_preprocessed/*
+workspace/CT-CLIP/test_data/*
+workspace/CT-CLIP/textout/*
+*.npy
+*.npz
+workspace/CT-CLIP/model.pt
