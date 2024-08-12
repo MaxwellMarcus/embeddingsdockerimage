@@ -1,0 +1,7 @@
+README.md
+setup.py
+transformer_maskgit.egg-info/PKG-INFO
+transformer_maskgit.egg-info/SOURCES.txt
+transformer_maskgit.egg-info/dependency_links.txt
+transformer_maskgit.egg-info/requires.txt
+transformer_maskgit.egg-info/top_level.txt
